@@ -1,4 +1,38 @@
-i {
-    background-color: #221f1f;
-    color: white;
+@use './colors' as *;
+@use "./font" as *;
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: $bg-white-color;
+    font-family: $main-font;
+}
+
+// NAVIGATION 
+// NAVIGATION
+// NAVIGATION
+.nav {
+	display: flex;
+	flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: $main-black;
+    height: 80px;
+
+	&__logo-box,
+	&__items,
+	&__login-box,
+	&__language-box {
+		display: inline-block;
+	}
+
+    &__mobile-box {
+        display: none;
+    }
 }
