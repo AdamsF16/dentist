@@ -1,5 +1,6 @@
 @use './colors' as *;
-@use "./font" as *;
+@use './font' as *;
+@use './mixins' as *;
 
 *,
 *::before,
@@ -10,20 +11,29 @@
 }
 
 body {
-	background-color: $bg-white-color;
-    font-family: $main-font;
+	background-color: $darker-white-color;
+	font-family: $main-font;
 }
 
-// NAVIGATION 
+.wrapper {
+	max-width: 1400px;
+	margin: 0 auto;
+}
+
 // NAVIGATION
 // NAVIGATION
+// NAVIGATION
+
+nav {
+	background-color: $main-black;
+}
+
 .nav {
 	display: flex;
 	flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $main-black;
-    height: 80px;
+	align-items: center;
+	justify-content: space-between;
+	height: 80px;
 
 	&__logo-box,
 	&__items,
@@ -32,7 +42,71 @@ body {
 		display: inline-block;
 	}
 
-    &__mobile-box {
-        display: none;
-    }
+	&__mobile-box {
+		display: none;
+	}
+
+	&__logo-box {
+		margin-left: 25px;
+		padding: 0px 5px;
+		min-width: 130px;
+	}
+	
+	&__logo {
+		color: $darker-white-color;
+		font-size: 25px;
+		font-weight: bold;
+		text-decoration: none;
+	}
+
+	&__logo-name {
+		margin-left: 10px;
+		font-family: $secondary-font;
+		font-size: 20px;
+		color: $main-orange;
+	}
+
+	&__items {
+		margin-left: 10%;
+		margin-top: 10px;
+	}
+
+	&__item {
+		margin: 0 20px;
+		color: $darker-white-color;
+		text-decoration: none;
+		font-size: 16px;
+		font-weight: bold;
+		text-transform: uppercase;
+		transition: color .3s;
+
+		&:hover {
+			color: $main-orange;
+		}
+	}
+
+	&__login-box {
+		margin-top: 10px;
+	}
+
+	&__login {
+		position: relative;
+		color: $main-orange;
+		text-decoration: none;
+		text-transform: uppercase;
+		font-weight: bold;
+		@include hover-style;
+	}
+}
+
+@media (min-width: 576px) {
+	.nav {
+		&__logo {
+			font-size: 40px;
+		}
+
+		&__logo-name {
+			font-size: 30px;
+		}
+	}
 }
