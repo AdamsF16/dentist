@@ -47,11 +47,13 @@ nav {
 	}
 
 	&__logo-box {
+		position: relative;
 		margin-left: 25px;
 		padding: 0px 5px;
 		min-width: 130px;
+		@include hover-style;
 	}
-	
+
 	&__logo {
 		color: $darker-white-color;
 		font-size: 25px;
@@ -78,7 +80,7 @@ nav {
 		font-size: 16px;
 		font-weight: bold;
 		text-transform: uppercase;
-		transition: color .3s;
+		transition: color 0.3s;
 
 		&:hover {
 			color: $main-orange;
@@ -96,6 +98,11 @@ nav {
 		text-transform: uppercase;
 		font-weight: bold;
 		@include hover-style;
+	}
+
+	&__language-box {
+		margin-right: 40px;
+		margin-top: 10px;
 	}
 }
 
