@@ -23,6 +23,9 @@ body {
 // NAVIGATION
 // NAVIGATION
 // NAVIGATION
+.fi {
+	font-size: 12px;
+}
 
 nav {
 	background-color: $main-black;
@@ -66,13 +69,13 @@ nav {
 	&__mobile-box{
 		display: inline-block;
 		position: relative;
-		margin-top: 10px;
+		margin-top: 5px;
 	}
 	
 	&__mobile-icon {
 		border: 1px solid transparent;
 		background-color: transparent;
-		font-size: 16px;
+		font-size: 12px;
 		font-weight: bold;
 		color: $main-orange;
 		cursor: pointer;
@@ -81,8 +84,8 @@ nav {
 
 	&__mobile-items-box {
 		position: absolute;
-		left: -28px;
-		top: 45px;
+		left: -20px;
+		top: 47px;
 	}
 
 	&__item-mobile {
@@ -91,8 +94,8 @@ nav {
 		text-align: center;
 		color: $darker-white-color;
 		text-decoration: none;
-		padding: 20px;
-		font-size: 16px;
+		padding: 15px;
+		font-size: 12px;
 		font-weight: bold;
 		background-color: $secondary-black;
 		border-top: 1px solid $darker-white-color;
@@ -143,12 +146,13 @@ nav {
 	}
 
 	&__login-box {
-		margin-top: 10px;
+		margin-top: 5px;
 	}
 
 	&__login {
 		position: relative;
 		color: $main-orange;
+		font-size: 12px;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: bold;
@@ -156,8 +160,8 @@ nav {
 	}
 
 	&__language-box {
-		margin-right: 40px;
-		margin-top: 10px;
+		margin-right: 10px;
+		margin-top: 5px;
 	}
 }
 
@@ -176,6 +180,9 @@ nav {
 
 
 @media (min-width: 576px) {
+	.fi {
+		font-size: 16px;
+	}
 	.nav {
 		&__logo {
 			font-size: 40px;
@@ -183,6 +190,37 @@ nav {
 
 		&__logo-name {
 			font-size: 30px;
+		}
+
+		&__login {
+			font-size: 16px;
+		}
+
+		&__login-box {
+			margin-top: 10px;
+		}
+
+		&__mobile-box {
+			margin-top: 10px;
+		}
+
+		&__mobile-icon {
+			font-size: 16px;
+		}
+
+		&__language-box {
+			margin-top: 10px;
+			margin-right: 40px;
+		}
+
+		&__item-mobile {
+			font-size: 16px;
+			padding: 20px;
+		}
+
+		&__mobile-items-box {
+			left: -28px;
+			top: 45px;
 		}
 	}
 }
