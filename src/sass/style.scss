@@ -36,14 +36,9 @@ nav {
 	height: 80px;
 
 	&__logo-box,
-	&__items,
 	&__login-box,
 	&__language-box {
 		display: inline-block;
-	}
-
-	&__mobile-box {
-		display: none;
 	}
 
 	&__logo-box {
@@ -68,9 +63,69 @@ nav {
 		color: $main-orange;
 	}
 
-	&__items {
-		margin-left: 10%;
+	&__mobile-box{
+		display: inline-block;
+		position: relative;
 		margin-top: 10px;
+	}
+	
+	&__mobile-icon {
+		border: 1px solid transparent;
+		background-color: transparent;
+		font-size: 16px;
+		font-weight: bold;
+		color: $main-orange;
+		cursor: pointer;
+		@include hover-style;
+	}
+
+	&__mobile-items-box {
+		position: absolute;
+		left: -28px;
+		top: 45px;
+	}
+
+	&__item-mobile {
+		display: none;
+		opacity: 0;
+		text-align: center;
+		color: $darker-white-color;
+		text-decoration: none;
+		padding: 20px;
+		font-size: 16px;
+		font-weight: bold;
+		background-color: $secondary-black;
+		border-top: 1px solid $darker-white-color;
+		animation: navMobileAnimation .5s forwards;
+		
+		&:first-child {
+			border-top: none;
+		}
+
+		&:nth-child(2){
+			animation-delay: .2s;
+		}
+		&:nth-child(3){
+			animation-delay: .4s;
+		}
+		&:nth-child(4){
+			animation-delay: .6s;
+		}
+		&:nth-child(5){
+			animation-delay: .8s;
+		}
+		
+		&:last-child{
+			border-bottom: none;
+		}
+	}
+	
+	&__active {
+		display: block;
+	}
+
+	&__items-box {
+		display: none;
 	}
 
 	&__item {
@@ -106,6 +161,20 @@ nav {
 	}
 }
 
+@keyframes navMobileAnimation {
+    from {
+        opacity: 0;
+        transform: translateY(60px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
 @media (min-width: 576px) {
 	.nav {
 		&__logo {
@@ -114,6 +183,20 @@ nav {
 
 		&__logo-name {
 			font-size: 30px;
+		}
+	}
+}
+
+@media(min-width: 992px) {
+	.nav {
+		&__items-box {
+			display: inline-block;
+			margin-left: 10%;
+			margin-top: 10px;
+		}
+
+		&__mobile-box {
+			display: none;
 		}
 	}
 }
