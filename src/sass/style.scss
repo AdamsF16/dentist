@@ -10,7 +10,13 @@
 	margin: 0;
 }
 
+html {
+	font-size: 62.5%;
+	scroll-behavior: smooth;
+}
+
 body {
+	font-size: 1.6rem;
 	background-color: $darker-white-color;
 	font-family: $main-font;
 }
@@ -24,7 +30,7 @@ body {
 // NAVIGATION
 // NAVIGATION
 .fi {
-	font-size: 12px;
+	font-size: 1.2rem;
 }
 
 nav {
@@ -36,7 +42,7 @@ nav {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	height: 80px;
+	min-height: 80px;
 
 	&__logo-box,
 	&__login-box,
@@ -54,7 +60,7 @@ nav {
 
 	&__logo {
 		color: $darker-white-color;
-		font-size: 25px;
+		font-size: 2.5rem;
 		font-weight: bold;
 		text-decoration: none;
 	}
@@ -62,7 +68,7 @@ nav {
 	&__logo-name {
 		margin-left: 10px;
 		font-family: $secondary-font;
-		font-size: 20px;
+		font-size: 2rem;
 		color: $main-orange;
 	}
 
@@ -75,7 +81,7 @@ nav {
 	&__mobile-icon {
 		border: 1px solid transparent;
 		background-color: transparent;
-		font-size: 12px;
+		font-size: 1.2rem;
 		font-weight: bold;
 		color: $main-orange;
 		cursor: pointer;
@@ -91,14 +97,14 @@ nav {
 	&__item-mobile {
 		display: none;
 		opacity: 0;
+		border-top: 1px solid $darker-white-color;
+		background-color: $secondary-black;
 		text-align: center;
 		color: $darker-white-color;
 		text-decoration: none;
 		padding: 15px;
-		font-size: 12px;
+		font-size: 1.2rem;
 		font-weight: bold;
-		background-color: $secondary-black;
-		border-top: 1px solid $darker-white-color;
 		animation: navMobileAnimation .5s forwards;
 		
 		&:first-child {
@@ -135,7 +141,7 @@ nav {
 		margin: 0 20px;
 		color: $darker-white-color;
 		text-decoration: none;
-		font-size: 16px;
+		font-size: 1.6rem;
 		font-weight: bold;
 		text-transform: uppercase;
 		transition: color 0.3s;
@@ -152,7 +158,7 @@ nav {
 	&__login {
 		position: relative;
 		color: $main-orange;
-		font-size: 12px;
+		font-size: 1.2rem;
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: bold;
@@ -181,40 +187,30 @@ nav {
 
 @media (min-width: 576px) {
 	.fi {
-		font-size: 16px;
+		font-size: 1.6rem;
 	}
 	.nav {
 		&__logo {
-			font-size: 40px;
+			font-size: 4rem;
 		}
 
 		&__logo-name {
-			font-size: 30px;
+			font-size: 3rem;
 		}
 
-		&__login {
-			font-size: 16px;
+		&__login, &__mobile-icon, &__item-mobile  {
+			font-size: 1.6rem;
 		}
 
-		&__login-box {
+		&__login-box, &__mobile-box, &__language-box {
 			margin-top: 10px;
-		}
-
-		&__mobile-box {
-			margin-top: 10px;
-		}
-
-		&__mobile-icon {
-			font-size: 16px;
 		}
 
 		&__language-box {
-			margin-top: 10px;
 			margin-right: 40px;
 		}
 
 		&__item-mobile {
-			font-size: 16px;
 			padding: 20px;
 		}
 
