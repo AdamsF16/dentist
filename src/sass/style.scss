@@ -63,6 +63,7 @@ nav {
 		margin-left: 25px;
 		padding: 0px 5px;
 		min-width: 130px;
+		text-decoration: none;
 		@include hover-style;
 	}
 
@@ -70,7 +71,6 @@ nav {
 		color: $darker-white-color;
 		font-size: 2.5rem;
 		font-weight: bold;
-		text-decoration: none;
 	}
 
 	&__logo-name {
