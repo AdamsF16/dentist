@@ -22,7 +22,7 @@ body {
 }
 
 .wrapper {
-	max-width: 1400px;
+	max-width: 1600px;
 	margin: 0 auto;
 }
 
@@ -171,6 +171,96 @@ nav {
 	}
 }
 
+// HEADER
+// HEADER
+// HEADER
+
+.header {
+	&__box {
+		position: relative;
+		width: 100%;
+		min-height: 90vh;
+		margin: 0 auto;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url('../../dist/img/dent-chair_640.jpg');
+		width: 100%;
+		height: 100%;
+		background-size: cover;
+		z-index: -5;
+	}
+
+	&__img-shadow {
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: rgb(235,236,242);
+		background: rgb(235,236,242);
+		background: linear-gradient(90deg, rgba(235,236,242,0.9475140397956058) 19%, rgba(235,236,242,0.8746849081429446) 44%, rgba(44,62,187,0) 68%);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		top: 30%;
+		left: 15%;
+		max-width: 350px;
+		z-index: 20;
+	}
+
+	&__text-title {
+		font-size: 3rem;
+		text-align: center;
+		margin-bottom: 25px;
+	}
+
+	&__text-title--company {
+		font-size: 4rem;
+		font-family: $secondary-font;
+	}
+
+	&__text {
+		text-align: center;
+		font-size: 1.6rem;
+		line-height: 2em;
+		margin-bottom: 20px;
+	}
+
+	&__text-btn {
+		padding: 1rem 2rem;
+		border-radius: 15px;
+		border: 1px solid $secondary-orange;
+		text-transform: uppercase;
+		font-weight: bold;
+		color: $secondary-orange;
+		background: transparent;
+		transition: color .3s, background-color .3s;
+		cursor: pointer;
+
+		&:hover {
+			color: $darker-white-color;
+			background-color: $secondary-orange;
+
+		}
+	}
+
+
+}
+
+
+
+
+
 @keyframes navMobileAnimation {
     from {
         opacity: 0;
@@ -231,6 +321,12 @@ nav {
 
 		&__mobile-box {
 			display: none;
+		}
+	}
+
+	.header {
+		&__img {
+			background-image: url('../../dist/img/dent-chair_1920.jpg');
 		}
 	}
 }
