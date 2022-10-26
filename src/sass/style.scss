@@ -263,10 +263,92 @@ nav {
 
 		}
 	}
-
-
 }
 
+// MAIN
+// MAIN
+// MAIN
+
+// OFFER
+
+.offer {
+	margin: 40px 20px;
+
+	&__title {
+		font-size: 3rem;
+		font-family: $secondary-font;
+		text-align: center;
+		text-transform: uppercase;
+		margin-bottom: 10px;
+	}
+
+	&__card-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		width: 100%;
+	}
+
+	&__card {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		background-color: $white-color;
+		border-radius: 8px;
+		margin: 20px 0px;
+		overflow: hidden;
+		border: 1px solid transparent;
+		transition: color .3s, border .3s, transform .3s;
+
+		&:hover {
+			color: $secondary-orange;
+			border: 1px solid $secondary-orange;
+			transform: scale(1.05);
+			.offer__card-element {
+				color: $secondary-orange;
+			}
+		}
+	}
+
+	&__card-img {
+		width: 100%;
+		max-width: 480px;
+		min-height: 200px;
+		max-height: 350px;
+	}
+
+	&__card-text-box {
+		margin: 15px;
+	}
+
+	&__card-title {
+		text-align: center;
+		font-size: 2.4rem;
+		font-weight: 400;
+	}
+	
+	&__card-text {
+		margin: 10px 0;
+		font-size: 1.4rem;
+	}
+	
+	&__card-list {
+		list-style: inside square;
+	}
+	
+	
+	&__card-list-element {
+		color: $secondary-orange;
+	}
+	
+	&__card-element {
+		font-size: 1.4rem;
+		font-style: italic;
+		color: black;
+		transition: color .3s;
+	}
+}
 
 
 
@@ -341,7 +423,7 @@ nav {
 
 		&__text-box {
 			left: 15%;
-			top: 30%;
+			top: 35%;
 			transform: none;
 		}
 	}
