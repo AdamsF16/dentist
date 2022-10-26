@@ -251,22 +251,7 @@ nav {
 	}
 
 	&__text-btn {
-		padding: 1.2rem 2.4rem;
-		border-radius: 15px;
-		border: 1px solid $secondary-orange;
-		text-transform: uppercase;
-		text-decoration: none;
-		font-weight: bold;
-		color: $secondary-orange;
-		background-color: $darker-white-color;
-		transition: color .3s, background-color .3s;
-		cursor: pointer;
-
-		&:hover {
-			color: $darker-white-color;
-			background-color: $secondary-orange;
-
-		}
+		@include btn-style;
 	}
 }
 
@@ -278,6 +263,13 @@ nav {
 
 .offer {
 	margin: 40px 20px;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
 
 	&__title {
 		font-size: 3rem;
@@ -352,6 +344,13 @@ nav {
 		font-style: italic;
 		color: black;
 		transition: color .3s;
+	}
+
+	&__btn {
+		margin-top: 25px;
+		@include btn-style;
+		background-color: $white-color;
+		font-size: 2rem;
 	}
 }
 
