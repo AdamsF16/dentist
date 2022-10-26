@@ -12,15 +12,15 @@
     &::before {
         top: -10px;
         left: -12px;
-        border-top: 0px solid $darker-white-color;
-        border-left: 0px solid $darker-white-color;
+        border-top: 0px solid $secondary-orange;
+        border-left: 0px solid $secondary-orange;
     }
     
     &::after {
         bottom: -8px;
         right: -12px;
-        border-bottom: 0px solid  $darker-white-color;
-        border-right: 0px solid $darker-white-color;
+        border-bottom: 0px solid  $secondary-orange;
+        border-right: 0px solid $secondary-orange;
     }
     
     &:hover::before, &:hover::after {
@@ -29,12 +29,12 @@
     }
     
     &:hover::before {
-        border-top: 3px solid $darker-white-color;
-        border-left: 3px solid $darker-white-color;
+        border-top: 3px solid $secondary-orange;
+        border-left: 3px solid $secondary-orange;
     }
     
     &:hover::after {
-        border-bottom: 3px solid $darker-white-color;
-        border-right: 3px solid $darker-white-color;
+        border-bottom: 3px solid $secondary-orange;
+        border-right: 3px solid $secondary-orange;
     }
 }
