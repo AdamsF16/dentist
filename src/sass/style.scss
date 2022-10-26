@@ -258,7 +258,9 @@ nav {
 // MAIN
 // MAIN
 // MAIN
-
+.main {
+	scroll-margin-top: 85px;
+}
 // OFFER
 
 .offer {
@@ -294,8 +296,9 @@ nav {
 		background-color: $white-color;
 		border-radius: 8px;
 		margin: 20px 0px;
+		box-shadow: 0px 3px 24px -6px rgba(66, 68, 90, 1);
 		overflow: hidden;
-		border: 1px solid transparent;
+		border: 1px solid rgba(66, 68, 90, 9);
 		transition: color .3s, border .3s, transform .3s;
 
 		&:hover {
@@ -347,8 +350,9 @@ nav {
 	}
 
 	&__btn {
-		margin-top: 25px;
 		@include btn-style;
+		text-align: center;
+		margin-top: 25px;
 		background-color: $white-color;
 		font-size: 2rem;
 	}
