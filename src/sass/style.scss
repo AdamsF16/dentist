@@ -229,6 +229,7 @@ nav {
 		left: 50%;
 		transform: translate(-50%, -50%);
 		max-width: 350px;
+		margin-top: 20px;
 		z-index: 0;
 	}
 
@@ -355,7 +356,62 @@ nav {
 		margin-top: 25px;
 		background-color: $white-color;
 		font-size: 2rem;
+		margin-bottom: 30px;
 	}
+}
+
+// ABOUT-US
+.about-us {
+	background-color: $main-black;
+
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 40px 0px;
+		}
+	
+	&__img {
+		display: block;
+		width: 100%;
+		max-height: 400px;
+	}
+
+	&__text-container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+		color: $darker-white-color;
+	}
+
+	&__title {
+		font-size: 3rem;
+		font-family: $secondary-font;
+		text-align: center;
+		text-transform: uppercase;
+		margin: 30px 0px;
+	}
+
+	&__list {
+		list-style: inside square;
+		margin: 0px 20px;
+		margin-bottom: 20px;
+	}
+
+	&__list-element {
+		margin-bottom: 10px;
+		color: $secondary-orange;
+	}
+
+	&__list-element--text {
+		color: $white-color;
+		line-height: 1.7em;
+		font-style: italic;
+	}
+	
+	
 }
 
 
@@ -411,6 +467,26 @@ nav {
 	}
 }
 
+@media(min-width: 850px){
+	.about-us {
+		&__container {
+			flex-direction: row;
+			justify-content: flex-start;
+			height: 450px;
+		}
+
+		&__img {
+			max-height: none;
+			height: 100%;
+			width: 50%;
+		}
+
+		&__text-container {
+			margin-bottom: 5%;
+		}
+	}
+}
+
 @media(min-width: 992px) {
 	.nav {
 		&__items-box {
@@ -460,6 +536,11 @@ nav {
 	.offer {
 		&__card {
 			width: 350px;
+		}
+	}
+	.about-us {
+		&__container {
+			height: 550px;
 		}
 	}
 }
