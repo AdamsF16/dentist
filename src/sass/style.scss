@@ -417,6 +417,70 @@ nav {
 
 
 
+// FOOTER
+.footer {
+	background-color: $main-black;
+	
+	&__container {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__localization-box {
+		margin: 30px 10px;
+		width: 280px;
+		height: 200px;
+
+		.footer__title {
+			text-align: center;
+			color: $darker-white-color;
+		}
+	}
+
+	&__map {
+		width: 100%;
+		height: 100%;
+	}
+
+	&__text-containers {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+	}
+
+	&__text-container {
+		margin-top: 20px;
+		color: $darker-white-color;
+	}
+
+	&__title {
+		font-family: $secondary-font;
+		text-transform: uppercase;
+		font-size: 1.6rem;
+		margin-bottom: 3px;
+	}
+
+	&__title--email {
+		margin-top: 20px;
+	}
+
+	&__text {
+		font-style: italic;
+		font-size: 1.4rem;
+	}
+
+	&__footer {
+		text-align: center;
+		color: $darker-white-color;
+		margin-top: 20px;
+		font-size: 1.3rem;
+	}
+}
+
+
 @keyframes navMobileAnimation {
     from {
         opacity: 0;
