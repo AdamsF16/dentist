@@ -531,6 +531,27 @@ nav {
 	}
 }
 
+@media(min-width: 700px) {
+	.footer {
+		overflow: hidden;
+		&__container {
+			flex-direction: row;
+			justify-content: space-around;
+			width: 100vw;
+			margin: 30px 0px;
+		}
+
+		&__localization-box {
+			width: 350px;
+			height: 300px;
+
+			.footer__title {
+				text-align: left;
+			}
+		}
+	}
+}
+
 @media(min-width: 850px){
 	.about-us {
 		&__container {
@@ -592,6 +613,23 @@ nav {
 		&__card-img {
 			min-height: none;
 			max-height: 200px;
+		}
+	}
+
+	.footer {
+		&__container {
+			justify-content: space-evenly;
+		}
+
+		&__localization-box {
+			width: 600px;
+		}
+
+		&__text-containers {
+			width: 400px;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
 		}
 	}
 }
