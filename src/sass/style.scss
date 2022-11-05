@@ -64,7 +64,6 @@ nav {
 		padding: 0px 5px;
 		min-width: 130px;
 		text-decoration: none;
-		@include hover-style;
 	}
 
 	&__logo {
@@ -82,7 +81,7 @@ nav {
 
 	&__mobile-box{
 		display: inline-block;
-		position: relative;
+		// position: relative;
 		margin-top: 5px;
 	}
 	
@@ -93,18 +92,19 @@ nav {
 		font-weight: bold;
 		color: $darker-white-color;
 		cursor: pointer;
-		@include hover-style;
+		// @include hover-style;
 	}
 
 	&__mobile-items-box {
 		position: absolute;
-		left: -20px;
-		top: 47px;
+		left: 0;
+		top: 80px;
 	}
 
 	&__item-mobile {
 		display: none;
 		opacity: 0;
+		width: 100vw;
 		border-top: 1px solid $darker-white-color;
 		background-color: $secondary-black;
 		text-align: center;
@@ -114,7 +114,7 @@ nav {
 		font-size: 1.2rem;
 		font-weight: bold;
 		transition: color .3s;
-		animation: navMobileAnimation .5s forwards;
+		animation: navMobileAnimation .3s forwards;
 
 		&:hover {
 			color: $secondary-orange;
@@ -175,7 +175,6 @@ nav {
 		text-decoration: none;
 		text-transform: uppercase;
 		font-weight: bold;
-		@include hover-style;
 	}
 
 	&__language-box {
@@ -606,11 +605,11 @@ nav {
 @keyframes navMobileAnimation {
     from {
         opacity: 0;
-        transform: translateY(60px);
+        transform: translateY(-60px);
     }
     to {
         opacity: 1;
-        transform: translateY(0);
+        transform: translateX(0);
     }
 }
 
@@ -630,6 +629,14 @@ nav {
 			font-size: 3rem;
 		}
 
+		&__logo-box {
+			@include hover-style;
+		}
+
+		&__login {
+			@include hover-style;
+		}
+
 		&__login, &__mobile-icon, &__item-mobile  {
 			font-size: 1.6rem;
 		}
@@ -647,8 +654,8 @@ nav {
 		}
 
 		&__mobile-items-box {
-			left: -28px;
-			top: 45px;
+			left: 0px;
+			top: 80px;
 		}
 	}
 }
