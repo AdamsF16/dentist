@@ -13,19 +13,19 @@ const handleNav = () => {
 
 const changeImg = () => {
     if(window.innerWidth >= 992) {
-        offerCardOne.setAttribute(`src`, `../dist/img/dentist-offer-one_1920.jpg`)
-        offerCardTwo.setAttribute(`src`, `../dist/img/dentist-offer-two_1920.jpg`)
-        offerCardThree.setAttribute(`src`, `../dist/img/dentist-offer-three_1920.jpg`)
+        offerCardOne.setAttribute(`src`, `./dist/img/dentist-offer-one_1920.jpg`)
+        offerCardTwo.setAttribute(`src`, `./dist/img/dentist-offer-two_1920.jpg`)
+        offerCardThree.setAttribute(`src`, `./dist/img/dentist-offer-three_1920.jpg`)
     } else {
-        offerCardOne.setAttribute(`src`, `../dist/img/dentist-offer-one_640.jpg`)
-        offerCardTwo.setAttribute(`src`, `../dist/img/dentist-offer-two_640.jpg`)
-        offerCardThree.setAttribute(`src`, `../dist/img/dentist-offer-three_640.jpg`)
+        offerCardOne.setAttribute(`src`, `./dist/img/dentist-offer-one_640.jpg`)
+        offerCardTwo.setAttribute(`src`, `./dist/img/dentist-offer-two_640.jpg`)
+        offerCardThree.setAttribute(`src`, `./dist/img/dentist-offer-three_640.jpg`)
     }
 
     if(window.innerWidth >= 850){
-        aboutUsImg.setAttribute(`src`, `../dist/img/doctor_1920.jpg`)
+        aboutUsImg.setAttribute(`src`, `./dist/img/doctor_1920.jpg`)
     } else {
-        aboutUsImg.setAttribute(`src`, `../dist/img/doctor_640.jpg`)
+        aboutUsImg.setAttribute(`src`, `./dist/img/doctor_640.jpg`)
     }
 }
 changeImg()
