@@ -182,6 +182,8 @@ nav {
 	}
 
 	&__language-chosen {
+		background: none;
+		border: none;
 		padding: 5px 10px;
 		font-size: 1.2rem;
 		font-weight: bold;
@@ -727,7 +729,7 @@ nav {
 		&__language-btn-container {
 			position: absolute;
 			top: 49px;
-			left: -32px;
+			left: -31px;
 		}
 		&__language-btn {
 			font-size: 1.6rem;

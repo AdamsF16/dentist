@@ -4,11 +4,26 @@ const offerCardOne = document.querySelector(`.offer__card-img--one`)
 const offerCardTwo = document.querySelector(`.offer__card-img--two`)
 const offerCardThree = document.querySelector(`.offer__card-img--three`)
 const aboutUsImg = document.querySelector(`.about-us__img`)
+const navLanguageBtn = document.querySelector(`.nav__language-chosen`)
+const navLanguageOption = document.querySelectorAll(`.nav__language-btn`)
 
 const handleNav = () => {
     navMobile.forEach(link => {
         link.classList.toggle(`nav__active`)
-    });
+});
+    navLanguageOption.forEach(language => {
+        language.classList.remove(`nav__language-btn-active`)
+})
+
+}
+
+const handleLanguageNav = () => {
+    navLanguageOption.forEach(language => {
+        language.classList.toggle(`nav__language-btn-active`)
+    })
+    navMobile.forEach(link => {
+        link.classList.remove(`nav__active`)
+    })
 }
 
 const changeImg = () => {
@@ -32,4 +47,5 @@ changeImg()
 
 
 navMobileBtn.addEventListener(`click`, handleNav)
+navLanguageBtn.addEventListener(`click`, handleLanguageNav)
 window.addEventListener(`resize`, changeImg)
