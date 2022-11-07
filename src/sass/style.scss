@@ -33,9 +33,7 @@ body {
 // NAVIGATION
 // NAVIGATION
 // NAVIGATION
-.fi {
-	font-size: 1.2rem;
-}
+
 
 nav {
 	background-color: $main-black;
@@ -178,8 +176,52 @@ nav {
 	}
 
 	&__language-box {
+		position: relative;
 		margin-right: 10px;
 		margin-top: 5px;
+	}
+
+	&__language-active {
+		padding: 5px 10px;
+		font-size: 1.2rem;
+		font-weight: bold;
+		color: $darker-white-color;
+		cursor: pointer;
+		margin-top: 5px;
+	}
+
+	&__language-btn-container {
+		position: absolute;
+		top: 52px;
+		left: -5px;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__language-btn {
+		// display: none;
+		border-top: 1px solid $darker-white-color;
+		background-color: $secondary-black;
+		text-align: center;
+		font-weight: bold;
+		color: $darker-white-color;
+		font-size: 1.2rem;
+		padding: 5px 10px;
+		width: 50px;
+		border: 1px solid transparent;
+		cursor: pointer;
+		animation: navLanguageAnimation .4s forwards;
+
+		&:first-child {
+			border-top: none;
+			border-bottom: 1px solid $darker-white-color;
+		}
+
+		&:nth-child(2){
+			animation-delay: .2s;
+		}
 	}
 }
 
@@ -609,6 +651,17 @@ nav {
     }
     to {
         opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes navLanguageAnimation {
+	from {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    to {
+        opacity: 1;
         transform: translateX(0);
     }
 }
@@ -617,9 +670,6 @@ nav {
 
 
 @media (min-width: 576px) {
-	.fi {
-		font-size: 1.6rem;
-	}
 	.nav {
 		&__logo {
 			font-size: 4rem;
@@ -637,7 +687,7 @@ nav {
 			@include hover-style;
 		}
 
-		&__login, &__mobile-icon, &__item-mobile  {
+		&__login, &__mobile-icon, &__item-mobile, &__language-active {
 			font-size: 1.6rem;
 		}
 
@@ -647,7 +697,39 @@ nav {
 
 		&__language-box {
 			margin-right: 40px;
+			@include hover-style;
+
+			&::before {
+				top: -5px;
+				left: -5px;
+			}
+
+			&::after {
+				bottom: -4px;
+				right: -4px;
+			}
+
+			&:hover::before, &:hover::after {
+				width: 50%;
+				height: 50%;
+			}
 		}
+
+		&__language-active {
+			margin-top: 0px;
+		}
+
+		&__language-btn-container {
+			position: absolute;
+			top: 49px;
+			left: -32px;
+		}
+		&__language-btn {
+			font-size: 1.6rem;
+			padding: 8px 16px;
+			width: 110px;
+		}
+
 
 		&__item-mobile {
 			padding: 20px;
