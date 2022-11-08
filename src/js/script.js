@@ -6,6 +6,9 @@ const offerCardThree = document.querySelector(`.offer__card-img--three`)
 const aboutUsImg = document.querySelector(`.about-us__img`)
 const navLanguageBtn = document.querySelector(`.nav__language-chosen`)
 const navLanguageOption = document.querySelectorAll(`.nav__language-btn`)
+const navLanguagePolish = document.querySelector(`.nav__language--pl`)
+const navLanguageEnglish = document.querySelector(`.nav__language--eng`)
+const navLanguageContainer = document.querySelector(`.nav__language-btn-container`)
 
 const handleNav = () => {
     navMobile.forEach(link => {
@@ -26,6 +29,19 @@ const handleLanguageNav = () => {
     })
 }
 
+const changeLanguage = (e) => {
+    const chosenLanguage = e.target.innerText
+    navLanguageBtn.textContent = chosenLanguage
+
+    navLanguageOption.forEach(language => {
+        language.classList.remove(`nav__language-btn-active`)
+})
+    
+    
+
+}
+
+
 const changeImg = () => {
     if(window.innerWidth >= 992) {
         offerCardOne.setAttribute(`src`, `./dist/img/dentist-offer-one_1920.jpg`)
@@ -45,7 +61,7 @@ const changeImg = () => {
 }
 changeImg()
 
-
 navMobileBtn.addEventListener(`click`, handleNav)
 navLanguageBtn.addEventListener(`click`, handleLanguageNav)
+navLanguageContainer.addEventListener(`click`, changeLanguage)
 window.addEventListener(`resize`, changeImg)
