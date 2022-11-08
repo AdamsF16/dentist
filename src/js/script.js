@@ -63,9 +63,9 @@ const changeImg = () => {
 		aboutUsImg.setAttribute(`src`, `./dist/img/doctor_640.jpg`);
 	}
 };
-changeImg();
 
 navMobileBtn.addEventListener(`click`, handleNav);
 navLanguageBtn.addEventListener(`click`, handleLanguageNav);
 navLanguageContainer.addEventListener(`click`, changeLanguage);
 window.addEventListener(`resize`, changeImg);
+window.addEventListener(`DOMContentLoaded`, changeImg)
