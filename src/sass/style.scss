@@ -776,7 +776,27 @@ nav {
     	margin: 0; 
 	}
 	
-	
+	&__box-checkbox {
+		display: flex;
+		flex-direction: row;
+		justify-content: left;
+		align-items: center;
+		margin: 5px auto;
+		width: 80%;
+		max-width: 400px;
+		font-size: 1.3rem;
+		font-style: italic;
+	}
+
+	&__input-checkbox {
+		margin-right: 5px;
+	}
+
+	&__btn {
+		@include btn-style;
+		margin-top: 20px;
+		margin-bottom: 40px;
+	}
 }
 
 
