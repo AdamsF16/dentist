@@ -36,7 +36,7 @@ body {
 
 
 nav {
-	background-color: $main-black;
+	background-color: $secondary-black;
 	position: fixed;
 	top: 0;
 	width: 100%;
@@ -118,9 +118,6 @@ nav {
 			color: $secondary-orange;
 		}
 		
-		&:first-child {
-			border-top: none;
-		}
 
 		&:nth-child(2){
 			animation-delay: .2s;
@@ -219,8 +216,8 @@ nav {
 		animation: navLanguageAnimation .4s forwards;
 
 		&:first-child {
-			border-top: none;
 			border-bottom: 1px solid $darker-white-color;
+			border-top: 1px solid $darker-white-color;
 		}
 
 		&:nth-child(2){
@@ -658,14 +655,130 @@ nav {
 	background-color: $darker-white-color;
 	
 	&__container {
-		height: 80vh;
-		margin-top: 110px;
+		min-height: 58vh;
+		margin-top: 130px;
 	}
 	&__title {
 		text-align: center;
 	}
 
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		margin: 20px auto;
+		margin-top: 40px;
+	}
+
+	&__label {
+		display: inline-block;
+		width: 80%;
+		max-width: 400px;
+		text-align: left;
+		text-transform: uppercase;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1.4rem;
+		margin-bottom: 2px;
+	}
+
+	&__input {
+		margin-bottom: 15px;
+		padding: 2px 4px;
+		width: 80%;
+		max-width: 400px;
+		border-radius: 3px;
+		border: 1px solid $main-black;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $secondary-orange;
+		}
+	}
+
+	&__btn {
+		margin: 10px auto;
+		@include btn-style;
+	}
+
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		font-style: italic;
+		font-size: 1.4rem;
+	}
+
+	&__text--link {
+		font-weight: bold;
+		color: $secondary-orange;
+	}
 }
+
+// REGISTER
+// REGISTER
+// REGISTER
+
+.register {
+	margin-top: 80px;
+	background-color: $darker-white-color;
+
+	&__container {
+		margin-top: 120px;
+		min-height: 80vh;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__box-main {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__label {
+		display: inline-block;
+		width: 80%;
+		max-width: 400px;
+		text-align: left;
+		// text-transform: uppercase;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1.4rem;
+		margin-bottom: 2px;
+	}
+
+	&__input {
+		margin-bottom: 20px;
+		padding: 2px 4px;
+		width: 80%;
+		max-width: 400px;
+		border-radius: 3px;
+		border: 1px solid $main-black;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $secondary-orange;
+			}
+	}
+
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+    	-webkit-appearance: none;
+    	-moz-appearance: none;
+    	appearance: none;
+    	margin: 0; 
+	}
+	
+	
+}
+
 
 @keyframes navMobileAnimation {
     from {
