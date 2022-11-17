@@ -799,6 +799,65 @@ nav {
 	}
 }
 
+.password {
+	margin-top: 80px;
+	background-color: $darker-white-color;
+
+	&__container {
+		margin-top: 120px;
+		min-height: 45vh;
+	}
+
+	&__box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+	}
+
+	&__title {
+		text-align: center;
+		margin-bottom: 30px;
+	}
+
+	&__input {
+		margin-bottom: 5px;
+		padding: 2px 4px;
+		width: 80%;
+		max-width: 400px;
+		border-radius: 3px;
+		border: 1px solid $main-black;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $secondary-orange;
+			}
+	}
+
+	&__label {
+		display: inline-block;
+		width: 80%;
+		max-width: 400px;
+		text-align: left;
+		// text-transform: uppercase;
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1.4rem;
+		margin-bottom: 2px;
+	}
+
+	&__text {
+		font-size: 1.3rem;
+		font-style: italic;
+		margin-bottom: 20px;
+	}
+
+	&__btn {
+		@include btn-style;
+	}
+
+}
+
 
 @keyframes navMobileAnimation {
     from {
