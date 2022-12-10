@@ -9,6 +9,10 @@ const navLanguageOption = document.querySelectorAll(`.nav__language-btn`);
 const navLanguagePolish = document.querySelector(`.nav__language--pl`);
 const navLanguageEnglish = document.querySelector(`.nav__language--eng`);
 const navLanguageContainer = document.querySelector(`.nav__language-btn-container`);
+const newPassword = document.querySelector(`#newPass`)
+const newPasswordRepeat = document.querySelector(`#newPassRep`)
+const newPassAllert = document.querySelector(`.password__text-new`)
+const newPassBtn = document.querySelector(`.new-password__btn`)
 
 const handleNav = () => {
 	navMobile.forEach((link) => {
@@ -64,8 +68,26 @@ const changeImg = () => {
 	}
 };
 
+
+const newPasswordReset = () => {
+    if(newPassword.value == newPasswordRepeat.value){
+        newPassAllert.textContent = `Hasło zostało zmienione.`
+        newPassAllert.classList.add(`password__done`)
+		newPassAllert.classList.remove(`password__failure`)
+        newPassword.value = ``
+		newPasswordRepeat.value = ``
+    } else {
+        newPassAllert.textContent = `Podane hasła nie są takie same.`
+		newPassAllert.classList.remove(`password__done`)
+        newPassAllert.classList.add(`password__failure`)
+		newPassword.value = ``
+		newPasswordRepeat.value = ``
+    }
+}
+
 navMobileBtn.addEventListener(`click`, handleNav);
 navLanguageBtn.addEventListener(`click`, handleLanguageNav);
 navLanguageContainer.addEventListener(`click`, changeLanguage);
 window.addEventListener(`resize`, changeImg);
 window.addEventListener(`DOMContentLoaded`, changeImg)
+newPassBtn.addEventListener(`click`, newPasswordReset)

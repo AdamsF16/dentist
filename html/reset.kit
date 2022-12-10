@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourDent</title>
+    <!-- @include links -->
+</head>
+<body>
+    <!-- @include nav -->
+    <main class="new-password password">
+        <section class="new-password__container password__container">
+            <div class="wrapper new-password__box password__box">
+                <h1 class="new-password__title password__title">Wpisz nowe hasło</h1>
+
+                <label for="newPass" class="new-password__label password__label">Podaj nowe hasło:</label>
+                <input type="password" id="newPass" class=" new-password__input password__input">
+
+                <label for="newPassRep" class="new-password__label password__label">Powtórz nowe hasło:</label>
+                <input type="password" id="newPassRep" class=" new-password__input password__input">
+                
+                <!-- ALERT-->
+                <p class="password__text-new password__text"></p>
+                <!-- ALERT-->
+
+                <button class="new-password__btn password__btn">Zapisz</button>
+            </div>
+        </section>
+    </main>
+    <!-- @include footer -->
+    <script src="./dist/js/script.min.js"></script>
+</body>
