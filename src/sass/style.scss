@@ -752,7 +752,7 @@ nav {
 	}
 
 	&__input {
-		margin-bottom: 20px;
+		margin-bottom: 10px;
 		padding: 2px 4px;
 		width: 80%;
 		max-width: 400px;
@@ -763,6 +763,10 @@ nav {
 			outline: none;
 			border: 1px solid $secondary-orange;
 			}
+
+		&--alert {
+			margin-bottom: 5px;
+		}
 	}
 
 	input[type=number]::-webkit-inner-spin-button, 
@@ -793,6 +797,28 @@ nav {
 		@include btn-style;
 		margin-top: 20px;
 		margin-bottom: 40px;
+	}
+
+	&__alert {
+		font-size: 1.2rem;
+		color: $red;
+		visibility: hidden;
+	}
+
+	&__alert--visible {
+		visibility: visible;
+		margin-bottom: 5px;
+	}
+
+	&__alert-email, &__alert-password {
+		font-size: 1.2rem;
+		color: $red;
+		visibility: hidden;
+	}
+
+	&__alert-email--visible, &__alert-password--visible {
+		visibility: visible;
+		margin-bottom: 5px;
 	}
 }
 
