@@ -810,13 +810,13 @@ nav {
 		margin-bottom: 5px;
 	}
 
-	&__alert-email, &__alert-password {
+	&__alert-email, &__alert-password, &__alert-postcode {
 		font-size: 1.2rem;
 		color: $red;
 		visibility: hidden;
 	}
 
-	&__alert-email--visible, &__alert-password--visible {
+	&__alert-email--visible, &__alert-password--visible, &__alert-postcode--visible {
 		visibility: visible;
 		margin-bottom: 5px;
 	}

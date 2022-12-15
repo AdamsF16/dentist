@@ -13,6 +13,8 @@ const passwordRegisterAllert = document.querySelector(`.register__alert-password
 const registerBtn = document.querySelector(`.register__btn`)
 const registerInputs = document.querySelectorAll(`.register__input`)
 const registerAlerts = document.querySelectorAll(`.register__alert`)
+const postCodeInput = document.querySelector(`#postCode`)
+const postCodeAlert = document.querySelector('.register__alert-postcode')
 
 
 // NAWIGACJA
@@ -53,10 +55,11 @@ const checkEmail = () => {
 	const correctEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
 
 	if(emailRegister.value.match(correctEmail)){
+		emailRegisterAllert.classList.remove(`register__alert-email--visible`)
 		emailRegister.value = ''
-        emailRegisterAllert.classList.remove(`register__alert-email--visible`)
 	} else {
 		emailRegisterAllert.classList.add(`register__alert-email--visible`)
+		emailRegisterAllert.textContent = 'Proszę wpisać poprawny adres email.'
 	}
 }
 
@@ -68,24 +71,42 @@ const passwordChecker = () => {
         passwordRegisterAllert.classList.remove(`register__alert-password--visible`)
     } else {
         passwordRegisterAllert.classList.add(`register__alert-password--visible`)
+		passwordRegisterAllert.textContent = 'Podane hasła nie są taki same.'
     }
+}
+
+
+const checkPostalCode = () => {
+	const plPostCodeRegexp = /^[0-9]{2}-[0-9]{3}/
+
+	if(plPostCodeRegexp.test(postCodeInput.value)) {
+		postCodeInput.nextElementSibling.classList.remove('register__alert-postcode--visible')
+
+	}
+	 else {
+		postCodeAlert.classList.add('register__alert-postcode--visible')
+		postCodeAlert.textContent = 'Proszę wpisać poprawny kod pocztowy.'
+	} 
 }
 
 const checkEmpty = () => {
     registerInputs.forEach(input => {
         if(input.value == "") {
-            registerAlerts.forEach(alert => alert.classList.add('register__alert--visible'))
+            input.nextElementSibling.classList.add('register__alert--visible')
+			input.nextElementSibling.textContent = 'Proszę uzupełnić to pole.'
         } else {
-            input.value = ''
-            registerAlerts.forEach(alert => alert.classList.remove('register__alert--visible'))
+            input.nextElementSibling.classList.remove('register__alert--visible')
         }
     })
 }
 
+
+
 const registerActivator = () => {
 	checkEmail()
+	checkPostalCode()
+	checkEmpty()
     passwordChecker()
-    checkEmpty()
 }
 
 navMobileBtn.addEventListener(`click`, handleNav);
