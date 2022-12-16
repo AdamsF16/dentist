@@ -15,6 +15,10 @@ const registerInputs = document.querySelectorAll(`.register__input`)
 const registerAlerts = document.querySelectorAll(`.register__alert`)
 const postCodeInput = document.querySelector(`#postCode`)
 const postCodeAlert = document.querySelector('.register__alert-postcode')
+const rulesInput = document.querySelector(`#rules`)
+const rulesLabel = document.querySelector(`.register__input-checkbox-info`)
+const popup = document.querySelector('.register__popup')
+const popupBtn = document.querySelector(`.register__popup-btn`)
 
 
 // NAWIGACJA
@@ -55,8 +59,9 @@ const checkEmail = () => {
 	const correctEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
 
 	if(emailRegister.value.match(correctEmail)){
+		// emailRegister.value = ''
 		emailRegisterAllert.classList.remove(`register__alert-email--visible`)
-		emailRegister.value = ''
+		emailRegisterAllert.classList.remove(`register__alert--visible`)
 	} else {
 		emailRegisterAllert.classList.add(`register__alert-email--visible`)
 		emailRegisterAllert.textContent = 'Proszę wpisać poprawny adres email.'
@@ -85,7 +90,7 @@ const checkPostalCode = () => {
 	}
 	 else {
 		postCodeAlert.classList.add('register__alert-postcode--visible')
-		postCodeAlert.textContent = 'Proszę wpisać poprawny kod pocztowy.'
+		postCodeAlert.textContent = 'Proszę wpisać poprawny kod pocztowy w formacie (XX-XXX).'
 	} 
 }
 
@@ -100,6 +105,38 @@ const checkEmpty = () => {
     })
 }
 
+const checkRules = () => {
+	if(rulesInput.checked) {
+		rulesLabel.classList.remove(`register__input-checkbox-info--red`)
+	} else {
+		rulesLabel.classList.add(`register__input-checkbox-info--red`)
+	}
+
+}
+
+const checkAlerts = () => {
+	let alertCount = 0
+
+	registerAlerts.forEach(alert => {
+		if(alert.classList.contains('register__alert--visible') || alert.classList.contains('register__alert-postcode--visible') || alert.classList.contains('register__alert-password--visible') || alert.classList.contains('register__alert-email--visible') || rulesLabel.classList.contains('register__input-checkbox-info--red')){
+			alertCount++
+		}
+	})
+
+	if(alertCount === 0) {
+		popup.classList.add('register__popup-show')
+		registerInputs.forEach(input => input.value = '')
+		rulesInput.checked = false
+		// console.log('DZIAŁA');
+	}
+
+	// console.log(alertCount);
+}
+
+const removePopup = () => {
+	popup.classList.remove('register__popup-show')
+}
+
 
 
 const registerActivator = () => {
@@ -107,9 +144,12 @@ const registerActivator = () => {
 	checkPostalCode()
 	checkEmpty()
     passwordChecker()
+	checkRules()
+	checkAlerts()
 }
 
 navMobileBtn.addEventListener(`click`, handleNav);
 navLanguageBtn.addEventListener(`click`, handleLanguageNav);
 navLanguageContainer.addEventListener(`click`, changeLanguage);
 registerBtn.addEventListener(`click`, registerActivator)
+popupBtn.addEventListener(`click`, removePopup)
