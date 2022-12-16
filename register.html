@@ -56,7 +56,7 @@
         <section class="register__container">
             <div class="wrapper">
                 <h1 class="register__title">Zarejestruj się</h1>
-                <div class="register__box-main">
+                <form class="register__box-main">
                     <label for="fname" class="register__label">Imię:</label>
                     <input type="fname" id="fname" class="register__input">
                      <!-- ALERT-->
@@ -133,12 +133,12 @@
                         <input type="checkbox" class="register__input-checkbox" id="rules">
                         <label for="rules" class="register__input-checkbox-info">Zapoznałem(-am) się z regulaminem i akceptuję warunki korzystania z serwisu.</label>
                     </div>
-                    <button class="register__btn">Zarejestruj się</button>
+                    <button class="register__btn" name="data" type="button" onclick="getData()">Zarejestruj się</button>
                     <div class="register__popup">
                         <p class="register__popup-text">Formularz został poprawnie wysłany!</p>
-                        <button class="register__popup-btn">Zamknij</button>
+                        <button class="register__popup-btn" type="button">Zamknij</button>
                     </div>
-                </div>
+                </form>
             </div>
         </section>
     </main>
