@@ -933,6 +933,93 @@ nav {
 
 }
 
+// TEAM
+// TEAM
+// TEAM
+
+.team-header {
+	&__box {
+		position: relative;
+		width: 100%;
+		min-height: 420px;
+		margin: 0 auto;
+	}
+
+	&__img {
+		position: absolute;
+		top: 0;
+		left: 0;
+		background-image: url('../../dist/img/laboratory_640.jpg');
+		width: 100%;
+		height: 100%;
+		// background-size: cover;
+		background-position: top;
+		z-index: -5;
+	}
+
+	&__shadow {
+		top: 0;
+		left: 0;
+		position: absolute;
+		background: rgb(235,236,242);
+		background: radial-gradient(circle, rgba(235,236,242,0.8074580173866421) 35%, rgba(235,236,242,0.6001751042213761) 55%, rgba(235,236,242,1) 97%);
+		width: 100%;
+		height: 100%;
+		z-index: -1;
+	}
+
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		position: absolute;
+		text-align: center;
+		padding: 10px;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		max-width: 350px;
+		margin-top: 20px;
+		z-index: 0;
+		@include hover-style-withoutHover;
+
+		&::before, &::after {
+			width: 50%;
+			height: 80%;
+		}
+
+		&::before {
+			border-top: 8px solid $secondary-orange;
+			border-left: 8px solid $secondary-orange;
+			top: -15px;
+			left: -10px;
+		}
+
+		&::after {
+			border-bottom: 8px solid $secondary-orange;
+			border-right: 8px solid $secondary-orange; 
+			bottom: -15px;
+			right: -10px;
+		}
+	}
+
+	&__title {
+		font-size: 2.8rem;
+		text-align: center;
+		font-weight: bold;
+		text-transform: uppercase;
+		letter-spacing: 2px;
+		font-family: $secondary-font;
+		margin-bottom: 15px;
+	}
+
+	&__text {
+		font-style: italic;
+		font-size: 1.5rem;
+	}
+}
+
 
 @keyframes navMobileAnimation {
     from {
@@ -1028,6 +1115,16 @@ nav {
 		&__mobile-items-box {
 			left: 0px;
 			top: 80px;
+		}
+	}
+}
+
+@media(min-width: 640px) {
+	.team-header {
+		&__img {
+			background-image: url('../../dist/img/laboratory_1920.jpg');
+			background-size: cover;
+			background-position: top;
 		}
 	}
 }
@@ -1195,6 +1292,16 @@ nav {
 	.about-us {
 		&__container {
 			height: 550px;
+		}
+	}
+
+	.team-header {
+		&__img {
+			background-position: 50% 20%;
+		}
+
+		&__text-box {
+			max-width: 420px;
 		}
 	}
 }
