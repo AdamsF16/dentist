@@ -830,7 +830,7 @@ nav {
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
-		position: absolute;
+		position: fixed;
 		top: -300px;
 		left: 50%;
 		transform: translate(-50%, -50%);
@@ -856,7 +856,7 @@ nav {
 		}
 
 		&-show {
-			top: 650px;
+			top: 50%;
 		}
 	}
 }
