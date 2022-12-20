@@ -954,6 +954,7 @@ nav {
 		height: 100%;
 		// background-size: cover;
 		background-position: top;
+		background-attachment: fixed;
 		z-index: -5;
 	}
 
@@ -1019,6 +1020,113 @@ nav {
 		font-size: 1.5rem;
 	}
 }
+
+.team-cards {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.team-card {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	border-radius: 8px;
+	background-color: $white-color;
+	margin: 25px 10px;
+	max-width: 350px;
+
+	&__img {
+		width: 350px;
+		height: 350px;
+		border-top-left-radius: 5px;
+		border-top-right-radius: 5px;
+
+		&--one, &--two, &--three, &--four {
+			background-size: cover;
+		}
+
+		&--one {
+			background-image: url('../../dist/img/dentist1_640.jpg');
+			background-position: 80% 50%;
+		}
+
+		&--two {
+			background-image: url('../../dist/img/dentist2_640.jpg');
+			background-position: top;
+		}
+
+		&--three {
+			background-image: url('../../dist/img/dentist3_640.jpg');
+			background-position: 30% 50%;
+		}
+
+		&--four {
+			background-image: url('../../dist/img/dentist4_640.jpg');
+			background-position: 65% 50%;
+		}
+	}
+
+	&__text-box {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		padding: 10px 20px;
+	}
+
+	&__title {
+		margin-top: 5px;
+		margin-bottom: 10px;
+		font-family: $secondary-font;
+	}
+
+	&__text {
+		font-size: 1.5rem;
+		text-align: center;
+		font-style: italic;
+		margin-bottom: 5px;
+	}
+
+	&__about-me {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin-bottom: 12px;
+		transition: .3s;
+		cursor: pointer;
+		color: $secondary-orange;
+
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+
+	&__about-me-title {
+		font-size: 1.5rem;
+		font-weight: bold;
+		text-transform: uppercase;
+	}
+
+	&__about-me-icon {
+		margin-left: 10px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 @keyframes navMobileAnimation {
