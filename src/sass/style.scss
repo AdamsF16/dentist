@@ -1114,18 +1114,52 @@ nav {
 	&__about-me-icon {
 		margin-left: 10px;
 	}
+
+	&__more-box {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		text-align: center;
+		padding: 8px;
+		min-width: 300px;
+
+		&--contact {
+			text-align: right;
+		}
+	}
+	
+	&__more-text {
+		font-size: 1.4rem;
+		font-style: italic;
+
+		&--bold {
+			font-weight: bold;
+		}
+	}
+
+	&__more-opinions {
+		margin: 15px 0px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: rgba(3, 30, 48, 0.696);
+		transition: .3s;
+		cursor: pointer;
+
+		&:hover {
+			color: $secondary-orange;
+		}
+	}
+
+	&__more-opinions-text {
+		font-weight: bold;
+	}
+
+	&__more-opinions-icon {
+		margin-left: 5px;
+	}
+
 }
-
-
-
-
-
-
-
-
-
-
-
 
 
 
