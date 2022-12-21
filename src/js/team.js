@@ -55,6 +55,7 @@ const showMoreInfo2 = (e) => {
 
 teamBtn.forEach((btn) => {
 	btn.addEventListener(`click`, showMoreInfo2)})
+	
 navMobileBtn.addEventListener(`click`, handleNav);
 navLanguageBtn.addEventListener(`click`, handleLanguageNav);
 navLanguageContainer.addEventListener(`click`, changeLanguage);

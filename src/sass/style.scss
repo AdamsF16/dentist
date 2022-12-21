@@ -1434,6 +1434,16 @@ nav {
 			width: 200px;
 		}
 	}
+
+	.team-cards {
+		flex-direction: row;
+		align-items: flex-start;
+		flex-wrap: wrap;
+	}
+
+	.team-card {
+		margin: 25px 40px;
+	}
 }
 
 @media(min-width: 1200px){
