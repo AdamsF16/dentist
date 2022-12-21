@@ -5,6 +5,8 @@ const navLanguageOption = document.querySelectorAll(`.nav__language-btn`);
 const navLanguagePolish = document.querySelector(`.nav__language--pl`);
 const navLanguageEnglish = document.querySelector(`.nav__language--eng`);
 const navLanguageContainer = document.querySelector(`.nav__language-btn-container`);
+const teamBtn = document.querySelectorAll(`.team-card__about-me`)
+const moreInfo = document.querySelectorAll(`.team-card__more`)
 
 const handleNav = () => {
 	navMobile.forEach((link) => {
@@ -35,3 +37,24 @@ const changeLanguage = (e) => {
 
     removeLanguageBox()
 };
+
+
+// const showMoreInfo = (e) => {
+// 	console.log(e.target);
+// 	moreInfo.forEach((info) => {
+// 		info.closest('.team-card__more').classList.toggle(`team-card__more--visible`)
+// 		console.log(info.closest('.team-card__more'));
+// 	} )
+// }
+
+const showMoreInfo2 = (e) => {
+	e.target.closest(`.team-card__about-me`).nextElementSibling.classList.toggle('team-card__more--visible')
+}
+
+
+
+teamBtn.forEach((btn) => {
+	btn.addEventListener(`click`, showMoreInfo2)})
+navMobileBtn.addEventListener(`click`, handleNav);
+navLanguageBtn.addEventListener(`click`, handleLanguageNav);
+navLanguageContainer.addEventListener(`click`, changeLanguage);

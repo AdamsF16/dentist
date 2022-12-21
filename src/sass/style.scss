@@ -1096,9 +1096,12 @@ nav {
 		justify-content: center;
 		align-items: center;
 		margin-bottom: 12px;
+		border: 1px solid transparent;
+		background: none;
 		transition: .3s;
 		cursor: pointer;
 		color: $secondary-orange;
+
 
 		&:hover {
 			transform: scale(1.1);
@@ -1113,6 +1116,14 @@ nav {
 
 	&__about-me-icon {
 		margin-left: 10px;
+	}
+
+	&__more {
+		display: none;
+
+		&--visible {
+			display: block;
+		}
 	}
 
 	&__more-box {
