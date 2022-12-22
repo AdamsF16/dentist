@@ -1439,10 +1439,42 @@ nav {
 		flex-direction: row;
 		align-items: flex-start;
 		flex-wrap: wrap;
+		// column-gap: 100px;
+		// display: grid;
+		// grid-template-columns: 1fr 1fr;
+		// grid-template-rows: 1fr 1fr;
 	}
 
 	.team-card {
-		margin: 25px 40px;
+		margin: 25px auto;
+	}
+
+	// .team-card--one {
+	// 	grid-column: 1/2;
+	// 	grid-row: 1/2;
+	// 	justify-self: flex-end;
+	// 	margin-right: 65px;
+	// }
+	// .team-card--two {
+	// 	grid-column: 2/3;
+	// 	grid-row: 1/2;
+	// 	margin-left: 65px;
+	// }
+	// .team-card--three {
+	// 	grid-column: 1/2;
+	// 	grid-row: 2/3;
+	// 	justify-self: flex-end;
+	// 	margin-right: 65px;
+	// }
+	// .team-card--four {
+	// 	grid-column: 2/3;
+	// 	grid-row: 2/3;
+	// }
+
+	.team-header {
+		&__img {
+			background-image: url('../../dist/img/laboratory_1920.jpg');
+		}
 	}
 }
 
