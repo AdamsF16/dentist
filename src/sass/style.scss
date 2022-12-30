@@ -1259,7 +1259,18 @@ nav {
 	}
 
 	&__question {
-		margin: 15px 20px;
+		position: relative;
+		margin: 20px;
+
+		&::before {
+			position: absolute;
+			bottom: -10px;
+			left: 0;
+			content: '';
+			width: 100%;
+			height: 2px;
+			background-color: $secondary-orange;
+		}
 	}
 
 	&__question-box {
@@ -1291,12 +1302,27 @@ nav {
 		font-family: $secondary-font;
 		font-weight: bold;
 		font-size: 2rem;
+		text-align: center;
+		width: 100%;
 	}
 
 	&__question-answer {
 		font-style: italic;
 		font-size: 1.5rem;
+		letter-spacing: 1px;
+		text-align: center;
+		display: none;
+
+		&--visible {
+			display: block;
+		}
 		
+	}
+
+	&__source {
+		margin-top: 10px;
+		font-size: 1.2rem;
+		font-style: italic;
 	}
 }
 
@@ -1628,6 +1654,17 @@ nav {
 	.team-header {
 		&__img {
 			background-image: url('../../dist/img/laboratory_1920.jpg');
+		}
+	}
+
+	.faq-box {
+		&__question-answer {
+			text-align: left;
+			max-width: 1200px;
+		}
+
+		&__question-text {
+			text-align: left;
 		}
 	}
 }
