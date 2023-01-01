@@ -1328,6 +1328,38 @@ nav {
 
 
 
+// OFFER SITE
+// OFFER SITE
+// OFFER SITE
+
+.offer-section {
+
+	&__img {
+		width: 200px;
+		height: 200px;
+		&--one {
+			background-image: url('../../dist/img/diagnosis_640.jpg');
+		}
+		&--two {
+			background-image: url('../../dist/img/ortodoncja_640.jpg');
+		}
+		&--three {
+			background-image: url('../../dist/img/nate-johnston-640-unsplash.jpg');
+		}
+		&--four {
+			background-image: url('../../dist/img/chirurgia_640.jpg');
+		}
+		&--five {
+			background-image: url('../../dist/img/protetyka_640.jpg');
+		}
+		&--six {
+			background-image: url('../../dist/img/laseroterapia_640.jpg');
+		}
+	}
+}
+
+
+
 @keyframes navMobileAnimation {
     from {
         opacity: 0;
