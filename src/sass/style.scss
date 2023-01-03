@@ -1386,7 +1386,7 @@ nav {
 			bottom: -5px;
 			left: 50%;
 			transform: translate(-50%, -50%);
-			background-color: #A1A1A1;
+			background-color: $grey;
 		}
 	}
 
@@ -1402,12 +1402,12 @@ nav {
 		padding: 7px;
 		font-size: 1.5rem;
 		font-style: italic;
-		border-bottom: 1px solid #A1A1A1;
+		border-bottom: 1px solid $grey;
 		transform: scale(1);
-		transition: font-weight .3s;
+		transition: border-bottom .1s, transform .3s, font-weight .3s;
 
 		&:hover {
-			border: none;
+			border-bottom: none;
 			font-weight: bold;
 			transform: scale(1.1);
 		}
@@ -1603,6 +1603,45 @@ nav {
 		&__text-container {
 			margin-bottom: 5%;
 		}
+	}
+
+	.offer-section {
+		flex-direction: row;
+		align-items: center;
+		margin-top: 0px;
+
+
+		&__img {
+			width: 50%;
+			height: 350px;
+			&--one {
+				background-image: url('../../dist/img/diagnosis_1920.jpg');
+			}
+			&--two {
+				background-image: url('../../dist/img/ortodoncja_1920.jpg');
+				order: 2;
+			}
+			&--three {
+				background-image: url('../../dist/img/nate-johnston-1920-unsplash.jpg');
+			}
+			&--four {
+				background-image: url('../../dist/img/chirurgia_1920.jpg');
+				order: 2;
+			}
+			&--five {
+				background-image: url('../../dist/img/protetyka_1920.jpg');
+			}
+			&--six {
+				background-image: url('../../dist/img/laseroterapia_1920.jpg');
+				order: 2;
+			}
+			
+		}
+		&__text-box {
+			width: 50%;
+		}
+
+
 	}
 }
 
