@@ -144,12 +144,22 @@ nav {
 
 	&__item {
 		margin: 0 20px;
+		margin-bottom: 20px;
 		color: $darker-white-color;
 		text-decoration: none;
 		font-size: 1.6rem;
 		font-weight: bold;
 		text-transform: uppercase;
 		transition: color 0.3s;
+
+		&:last-child {
+			display: none;
+			position: relative;
+			top: 10px;
+			color: $secondary-orange;
+			margin-left: 30px;
+			font-size: 1.5rem;
+		}
 
 		&:hover {
 			color: $secondary-orange;
@@ -1811,7 +1821,25 @@ nav {
 	}
 }
 
+@media(min-width: 1100px){
+	.nav {
+		&__item {
+			&:last-child {
+				display: inline-block;
+			}
+		}
+	}
+}
+
 @media(min-width: 1200px){
+	.nav {
+		&__item {
+			&:last-child {
+				margin-left: 80px;
+			}
+		}
+	}
+
 	.offer {
 		&__card {
 			width: 350px;
