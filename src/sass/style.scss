@@ -179,7 +179,7 @@ nav {
 	&__language-chosen {
 		background: none;
 		border: none;
-		padding: 5px 10px;
+		padding: 0px 10px;
 		font-size: 1.2rem;
 		font-weight: bold;
 		color: $darker-white-color;
@@ -189,7 +189,7 @@ nav {
 
 	&__language-btn-container {
 		position: absolute;
-		top: 52px;
+		top: 47px;
 		left: -5px;
 		display: flex;
 		flex-direction: column;
@@ -1331,12 +1331,21 @@ nav {
 // OFFER SITE
 // OFFER SITE
 // OFFER SITE
-
+.offer-site {
+	margin-top: 80px;
+}
 .offer-section {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin-top: 20px;
+	overflow: hidden;
 
 	&__img {
-		width: 200px;
-		height: 200px;
+		width: 100%;
+		height: 250px;
+		background-position: center;
+		background-size: cover;
 		&--one {
 			background-image: url('../../dist/img/diagnosis_640.jpg');
 		}
@@ -1354,6 +1363,68 @@ nav {
 		}
 		&--six {
 			background-image: url('../../dist/img/laseroterapia_640.jpg');
+		}
+	}
+
+	&__text-box {
+		padding: 10px;
+	}
+
+	&__title {
+		position: relative;
+		font-family: $secondary-font;
+		font-size: 2.6rem;
+		text-align: center;
+		text-transform: uppercase;
+		color: $secondary-orange;
+
+		&::before {
+			content: '';
+			position: absolute;
+			width: 300px;
+			height: 2px;
+			bottom: -5px;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			background-color: #A1A1A1;
+		}
+	}
+
+	&__list {
+		padding: 10px 20px;
+		margin-top: 15px;
+		list-style: none;
+		text-align: center;
+	}
+
+	&__text {
+		position: relative;
+		padding: 7px;
+		font-size: 1.5rem;
+		font-style: italic;
+		border-bottom: 1px solid #A1A1A1;
+		transform: scale(1);
+		transition: font-weight .3s;
+
+		&:hover {
+			border: none;
+			font-weight: bold;
+			transform: scale(1.1);
+		}
+		&::before {
+			content: '';
+			position: absolute;
+			bottom: 0;
+			left: 50%;
+			height: 2px;
+			width: 90%;
+			background-color: $secondary-orange;
+			transform: translateX(-50%) scaleX(0);
+			transition: transform .3s;
+		}
+		
+		&:hover::before {
+			transform: translateX(-50%) scaleX(1);
 		}
 	}
 }
@@ -1445,7 +1516,7 @@ nav {
 
 		&__language-btn-container {
 			position: absolute;
-			top: 49px;
+			top: 44px;
 			left: -31px;
 		}
 		&__language-btn {
