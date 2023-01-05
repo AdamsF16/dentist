@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YourDent</title>
+    <script src="https://kit.fontawesome.com/84f36aaf8f.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+<body>
+    <nav>
+	<div class="wrapper nav">
+		<a href="index.html" class="nav__logo-box">
+			<div class="nav__logo">
+				<i class="fa-solid fa-tooth"></i>
+				<span class="nav__logo-name">YourDent</span>
+			</div>
+		</a>
+		<!-- NAWIGACJA MOBILNA -->
+		<div class="nav__mobile-box">
+			<button class="nav__mobile-icon">MENU</button>
+			<ul class="nav__mobile-items-box">
+				<a href="offer.html" class="nav__item-mobile">Oferta</a>
+				<a href="" class="nav__item-mobile">Umów wizytę</a>
+				<a href="team.html" class="nav__item-mobile">Zespół</a>
+				<a href="faq.html" class="nav__item-mobile">FAQ</a>
+			</ul>
+		</div>
+		<!-- NAWIGACJA DESKTOP -->
+		<div class="nav__items-box">
+			<a href="offer.html" class="nav__item">Oferta</a>
+			<a href="" class="nav__item">Umów wizytę</a>
+			<a href="team.html" class="nav__item">Zespół</a>
+			<a href="faq.html" class="nav__item">FAQ</a>
+			<div class="nav__item">
+				<p>ZADZWOŃ DO NAS</p>
+				<p>+48 123 - 456 - 789</p>
+			</div>
+		</div>
+		<div class="nav__login-box">
+			<a href="login.html" class="nav__login">Login</a>
+		</div>
+   		<div class="nav__language-box">
+			<button class="nav__language-chosen">PL</button>
+			<div class="nav__language-btn-container">
+				<button class="nav__language-btn nav__language--pl">PL</button>
+        		<button class="nav__language-btn nav__language--eng">EN</button>
+			</div>
+    	</div>
+	</a>
+</nav>
+
+    <main class="visit">
+        <div class="wrapper">
+            <div class="visit-container">
+                <h1 class="visit__title">Umów wizytę</h1>
+                <div class="visit__select-box">
+                    <label for="doctors" class="visit__label"><i class="fa-solid fa-user-doctor visit__icon"></i>Wybierz lekarza</label>
+                    <select name="doctor" id="doctors" class="visit__select--doctors">
+                        <option value="" class="visit__option">--  Proszę wybrać lekarza  --</option>
+                        <option value="Marianna" class="visit__option">Dr Marianna</option>
+                        <option value="Renne" class="visit__option">Dr Renne</option>
+                        <option value="Anett" class="visit__option">Dr Anett</option>
+                        <option value="Dominic" class="visit__option">Dr Dominic</option>
+                    </select> 
+                </div>
+                <div class="visit__select-box">
+                    <label for="services" class="visit__label"><i class="fa-solid fa-notes-medical visit__icon"></i>Wybierz usługę</label>
+                    <select name="service" id="services" class="visit__select--service">
+                        <option value="" class="visit__option">--  Proszę wybrać rodzaj usługi  --</option>
+                        <option value="consultation" class="visit__option">Konsultacja stomatologiczna -- 150zł</option>
+                        <option value="control" class="visit__option">Wizyta kontrolna -- 100zł</option>
+                        <option value="diagnostics" class="visit__option">Diagnostyka komputerowa -- od 100zł</option>
+                        <option value="takingCare" class="visit__option">Stomatologia zachowawcza -- od 200zł</option>
+                        <option value="aesthetic" class="visit__option">Stomatologia estetyczna -- od 300zł</option>
+                        <option value="treatment" class="visit__option">Leczenie stomatologiczne -- od 300zł</option>
+                        <option value="rootTreatment" class="visit__option">Leczenie kanałowe -- od 600zł</option>
+                        <option value="denture" class="visit__option">Protezy -- od 1000zł</option>
+                        <option value="braces" class="visit__option">Zakładanie aparatu ortodontycznego -- od 1500zł</option>
+                    </select>
+                </div>
+                <div class="visit__date-box">
+                    <div class="visit__date-day">
+                        <h4 class="visit__date-title">Wybierz termin</h4>
+                        <label for="time" class="visit__label"><i class="fa-regular fa-calendar-days visit__icon"></i>Pokaż wolne terminy od:</label>
+                        <input type="date" id="time" class="visit__input-date">
+                        <label for="timeEnd">do:</label>
+                        <input type="date" id="timeEnd" class="visit__input-date">
+                        <button class="visit__date-btn">Pokaż</button>
+                    </div>
+                </div>
+                <div class="visit__table-box">
+                    <table class="visit__table">
+                        <thead class="visit__table-head">
+                            <tr>
+                                <td class="visit__table-day">Dzień</td>
+                                <td class="visit__table-day">Godzina</td>
+                                <td class="visit__table-day">Lekarz</td> 
+                                <!-- NIE WIEM CZY LEKARZ MA BYC WYBIERANY W INPUCIE CZY W DACIE WIEC DAJE NARAZIE TU I TU -->
+                                <td class="visit__table-empty">Wybierz</td>
+                            </tr>
+                        </thead>
+                        <tbody class="visit__table-body">
+                            <tr>
+                                <td>02.02.2023</td>
+                                <td>8:00</td>
+                                <td>Renne</td>
+                                <td><button class="visit__date-choose"></button></td>
+                            </tr>
+                            <tr>
+                                <td>02.02.2023</td>
+                                <td>9:00</td>
+                                <td>Renne</td>
+                                <td><button class="visit__date-choose"></button></td>
+                            </tr>
+                            <tr>
+                                <td>02.02.2023</td>
+                                <td>10:00</td>
+                                <td>Renne</td>
+                                <td><button class="visit__date-choose"></button></td>
+                            </tr>
+                            <tr>
+                                <td>02.02.2023</td>
+                                <td>11:00</td>
+                                <td>Renne</td>
+                                <td><button class="visit__date-choose"></button></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <button class="visit__btn-confirm"></button>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+    <div class="wrapper">
+        <div class="footer__container">
+            <div class="footer__localization-box">
+                <h3 class="footer__title">Lokalizacja:</h3>
+                <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.4400583843694!2d19.932970469123095!3d50.05354036370706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b6d053619f5%3A0xacb9dfc4d67fa598!2sZamek%20Kr%C3%B3lewski%20na%20Wawelu!5e0!3m2!1spl!2spl!4v1667033593172!5m2!1spl!2spl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer__text-containers">
+                <div class="footer__text-container footer__text-adress">
+                    <h3 class="footer__title">Adres Kliniki:</h3>
+                    <p class="footer__text">ul. Prosta 2, 30 - 123, Kraków</p>
+                </div>
+                <div class="footer__text-container footer__text-contact">
+                    <h3 class="footer__title">Nr Kontaktowy:</h3>
+                    <p class="footer__text">+48 123 - 456 - 789</p>
+                    <p class="footer__text">+48 125 - 54 - 28</p>
+                    <h3 class="footer__title footer__title--email">EMAIL:</h3>
+                    <p class="footer__text">yourdent12345@dent.com</p>
+                </div>
+                <div class="footer__text-container footer__text-hours">
+                    <h3 class="footer__title">Godziny otwarcia:</h3>
+                    <p class="footer__text">Poniedziałek: 9:00 - 17:00</p>
+                    <p class="footer__text">Wtorek: 7:00 - 15:00</p>
+                    <p class="footer__text">Środa: 7:00 - 15:00</p>
+                    <p class="footer__text">Czwartek: 9:00 - 17:00</p>
+                    <p class="footer__text">Piątek: 9:00 - 14:00</p>
+                    <p class="footer__text">Sobota: 11:00 - 14:00</p>
+                    <p class="footer__text">Niedziela: Nieczynne</p>
+                </div>
+            </div>
+        </div>
+        <p class="footer__footer">&copy; Yourdent | Made by: Adam & Patryk </p>
+    </div>
+</footer>
+    <script src="./dist/js/visit.min.js"></script>
+</body>
