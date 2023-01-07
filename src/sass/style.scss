@@ -1634,13 +1634,13 @@ nav {
 			@include hover-style;
 
 			&::before {
-				top: -5px;
-				left: -5px;
+				top: -8px;
+				left: -4px;
 			}
 
 			&::after {
-				bottom: -4px;
-				right: -4px;
+				bottom: -7px;
+				right: -2px;
 			}
 
 			&:hover::before, &:hover::after {
