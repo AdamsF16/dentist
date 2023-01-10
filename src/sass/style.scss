@@ -1593,6 +1593,7 @@ nav {
 
 	&__table-box {
 		display: flex;
+		flex-direction: column;
 		justify-content: center;
 		align-items: center;
 		margin: 15px 10px;
@@ -1654,6 +1655,21 @@ nav {
 			background-color: $light-red;
 			border: $light-red;
 
+		}
+	}
+
+	&__next-btn {
+		background: none;
+		border: none;
+		margin-top: 5px;
+		color: $secondary-orange;
+		font-weight: bold;
+		transform: scale(1);
+		transition: transform .3s;
+		cursor: pointer;
+
+		&:hover {
+			transform: scale(1.1);
 		}
 	}
 }
