@@ -194,12 +194,12 @@ nav {
 		font-weight: bold;
 		color: $darker-white-color;
 		cursor: pointer;
-		margin-top: 5px;
+		margin-top: 2px;
 	}
 
 	&__language-btn-container {
 		position: absolute;
-		top: 47px;
+		top: 45px;
 		left: -5px;
 		display: flex;
 		flex-direction: column;
@@ -950,10 +950,12 @@ nav {
 
 .team-header {
 	&__box {
+		display: flex;
 		position: relative;
-		width: 100%;
+		// width: 100%;
 		min-height: 420px;
-		margin: 0 auto;
+		overflow: hidden;
+		// margin: 0 auto;
 	}
 
 	&__img {
@@ -988,7 +990,7 @@ nav {
 		position: absolute;
 		text-align: center;
 		padding: 10px;
-		top: 50%;
+		top: 55%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		max-width: 350px;
@@ -1048,11 +1050,11 @@ nav {
 	border-radius: 8px;
 	background-color: $white-color;
 	margin: 25px 10px;
-	max-width: 350px;
+	max-width: 250px;
 	box-shadow: 3px 3px 8px 2px hsl(227, 12%, 78%), -3px 3px 8px 2px hsl(227, 12%, 78%);
 
 	&__img {
-		width: 350px;
+		width: 250px;
 		height: 350px;
 		border-top-left-radius: 5px;
 		border-top-right-radius: 5px;
@@ -1144,7 +1146,7 @@ nav {
 		align-items: center;
 		text-align: center;
 		padding: 8px;
-		min-width: 300px;
+		min-width: 250px;
 
 		&--contact {
 			text-align: right;
@@ -1189,6 +1191,7 @@ nav {
 
 .faq-image {
 	display: flex;
+	position: relative;
 
 	&__img {
 	width: 100%;
@@ -1218,7 +1221,7 @@ nav {
 		position: absolute;
 		text-align: center;
 		padding: 10px;
-		top: 35%;
+		top: 55%;
 		left: 50%;
 		transform: translate(-50%, -50%);
 		max-width: 350px;
@@ -1566,6 +1569,21 @@ nav {
 			border: 1px solid $darker-grey;
 		}
 	}
+
+	&__table-box {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: 15px 10px;
+	}
+
+	&__table-head {
+		font-size: 1.7rem;
+		font-weight: bold;
+		font-family: $secondary-font;
+		text-align: left;
+		background-color: red;
+	}
 }
 
 
@@ -1594,7 +1612,19 @@ nav {
 }
 
 
+@media(min-width: 300px) {
+	.team-card {
+			max-width: 350px;
 
+		&__img {
+			width: 350px;
+		}
+
+		&__more-box {
+			max-width: 350px;
+		}
+	}
+}
 
 @media(min-width: 500px) {
 	.faq-image {
