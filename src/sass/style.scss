@@ -370,6 +370,7 @@ nav {
 		max-width: 480px;
 		min-height: 200px;
 		max-height: 350px;
+
 	}
 
 	&__card-text-box {
@@ -1823,7 +1824,6 @@ include
 		&__container {
 			flex-direction: row;
 			justify-content: space-around;
-			width: 100vw;
 			margin: 30px 0px;
 		}
 
