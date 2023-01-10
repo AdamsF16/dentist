@@ -1488,6 +1488,7 @@ nav {
 	
 	&__container {
 		display: flex;
+		max-width: 270px;
 		flex-direction: column;
 		margin: 50px 30px;
 		background-color: $white-color;
@@ -1592,16 +1593,21 @@ nav {
 		}
 	}
 
+	&__table {
+		max-width: 270px;
+	}
+
 	&__table-box {
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		margin: 15px 10px;
+		margin: 5px 10px;
+		max-width: 270px;
 	}
 
 	&__table-head {
-		font-size: 1.7rem;
+		font-size: 1.4rem;
 		font-weight: bold;
 		font-family: $secondary-font;
 		text-align: center;
@@ -1609,7 +1615,7 @@ nav {
 	}
 
 	&__table-day {
-		padding: 5px 10px;
+		padding: 2px 4px;
 		
 		&:first-child {
 			border-top-left-radius: 7px;
@@ -1623,7 +1629,7 @@ nav {
 	&__table-body {
 		text-align: center;
 		font-style: italic;
-		font-size: 1.5rem;
+		font-size: 1.2rem;
 	}
 
 	&__table-row {
@@ -1712,6 +1718,36 @@ nav {
 		&__more-box {
 			max-width: 350px;
 		}
+	}
+}
+
+@media(min-width: 350px) {
+	.visit {
+		&__container {
+			max-width: none;
+		}
+
+		&__table {
+			max-width: none;
+		}
+
+		&__table-box {
+			max-width: none;
+			margin: 15px 10px;
+		}
+
+		&__table-head {
+			font-size: 1.7rem; 
+		}
+
+		&__table-day {
+			padding: 5px 10px; 
+		}
+
+		&__table-body {
+			font-size: 1.5rem;
+		}
+
 	}
 }
 
