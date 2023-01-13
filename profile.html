@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>YourDent</title>
+	<script src="https://kit.fontawesome.com/84f36aaf8f.js" crossorigin="anonymous"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Karla:wght@400;600;700&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="./dist/css/style.min.css">
+</head>
+<body>
+    <main class="profile">
+		<div class="wrapper">
+			<div class="profile__container">
+				<div class="profile__menu">
+					<ul class="profile__buttons">
+						<button class="profile__my-profile-btn" type="button"><i class="fa-regular fa-user profile__icon"></i>Mój profil</button>
+						<button class="profile__edit-btn" type="button"><i class="fa-regular fa-share-from-square profile__icon"></i>Zmień dane</button>
+						<button class="profile__visit-history-btn" type="button"><i class="fa-solid fa-clock-rotate-left profile__icon"></i>Historia wizyt</button>
+						<button class="profile__change-pass-btn" type="btn"><i class="fa-solid fa-unlock profile__icon"></i>Zmień hasło</button>
+						<button class="profile__logout-btn" type="button"><i class="fa-solid fa-arrow-right-from-bracket profile__icon"></i>Wyloguj się</button>
+					</ul>
+				</div>
+				<div class="profile__my-profile-box">
+					<div class="profile__user-box">
+						<div class="profile__img"></div>
+						<p class="profile__name"></p>
+					</div>
+					<div class="profile__data-box">
+						<div class="profile__data profile__data--pesel">
+							<h4 class="profile__data-title">Pesel:</h4>
+							<p class="profile__data-text">1234-5678-9012</p>
+						</div>
+						<div class="profile__data profile__data--birth">
+							<h4 class="profile__data-title">Data urodzenia:</h4>
+							<p class="profile__data-text">01.01.1996</p>
+						</div>
+						<div class="profile__data profile__data--phone">
+							<h4 class="profile__data-title">Numer telefonu:</h4>
+							<p class="profile__data-text">12-123-456-789</p>
+						</div>
+						<div class="profile__data profile__data--place">
+							<h4 class="profile__data-title">Miejsce zamieszkania:</h4>
+							<p class="profile__data-text">Kraków</p>
+						</div>
+						<div class="profile__data profile__data--street">
+							<h4 class="profile__data-title">Ulica:</h4>
+							<p class="profile__data-text">Długa 1</p>
+						</div>
+						<div class="profile__data profile__data--postal-code">
+							<h4 class="profile__data-title">Kod pocztowy:</h4>
+							<p class="profile__data-text">00-000</p>
+						</div>
+						<div class="profile__data profile__data--email">
+							<h4 class="profile__data-title">Adres email:</h4>
+							<p class="profile__data-text">jankowalski@gmail.com</p>
+						</div>
+					</div>
+				</div>
+				<div class="profile__change-data-box">
+					<div class="profile__change profile__change--name">
+						<label for="changeName">Zmień imię:</label>
+						<input type="text" id="changeName">
+					</div>
+				</div>
+			</div>
+		</div>
+	</main>
+
+    <footer class="footer">
+    <div class="wrapper">
+        <div class="footer__container">
+            <div class="footer__localization-box">
+                <h3 class="footer__title">Lokalizacja:</h3>
+                <iframe class="footer__map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3158.4400583843694!2d19.932970469123095!3d50.05354036370706!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47165b6d053619f5%3A0xacb9dfc4d67fa598!2sZamek%20Kr%C3%B3lewski%20na%20Wawelu!5e0!3m2!1spl!2spl!4v1667033593172!5m2!1spl!2spl" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            <div class="footer__text-containers">
+                <div class="footer__text-container footer__text-adress">
+                    <h3 class="footer__title">Adres Kliniki:</h3>
+                    <p class="footer__text">ul. Prosta 2, 30 - 123, Kraków</p>
+                </div>
+                <div class="footer__text-container footer__text-contact">
+                    <h3 class="footer__title">Nr Kontaktowy:</h3>
+                    <p class="footer__text">+48 123 - 456 - 789</p>
+                    <p class="footer__text">+48 125 - 54 - 28</p>
+                    <h3 class="footer__title footer__title--email">EMAIL:</h3>
+                    <p class="footer__text">yourdent12345@dent.com</p>
+                </div>
+                <div class="footer__text-container footer__text-hours">
+                    <h3 class="footer__title">Godziny otwarcia:</h3>
+                    <p class="footer__text">Poniedziałek: 9:00 - 17:00</p>
+                    <p class="footer__text">Wtorek: 7:00 - 15:00</p>
+                    <p class="footer__text">Środa: 7:00 - 15:00</p>
+                    <p class="footer__text">Czwartek: 9:00 - 17:00</p>
+                    <p class="footer__text">Piątek: 9:00 - 14:00</p>
+                    <p class="footer__text">Sobota: 11:00 - 14:00</p>
+                    <p class="footer__text">Niedziela: Nieczynne</p>
+                </div>
+            </div>
+        </div>
+        <p class="footer__footer">&copy; Yourdent | Made by: Adam & Patryk </p>
+    </div>
+</footer>
+    <script src="./dist/js/profile.min.js"></script>
+</body>
