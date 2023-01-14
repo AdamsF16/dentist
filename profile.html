@@ -162,20 +162,23 @@
 						</tbody>
 					</table>
 				</div>
-				<div class="profile__reset-box">
+				<form class="profile__reset-box">
 					<div class="profile__reset-input-box">
-						<label for="oldPassword">Podaj stare hasło:</label>
-						<input type="password" id="oldPassword">
+						<label for="oldPassword" class="profile__reset-label">Podaj stare hasło:</label>
+						<input type="password" id="oldPassword" class="profile__reset-input">
+						<p class="profile__reset-alert profile__reset-alert--old">Podano błędne hasło.</p>
 					</div>
 					<div class="profile__reset-input-box">
-						<label for="changePassword">Podaj nowe hasło:</label>
-						<input type="password" id="changePassword">
+						<label for="changePassword" class="profile__reset-label">Podaj nowe hasło:</label>
+						<input type="password" id="changePassword" class="profile__reset-input">
 					</div>
 					<div class="profile__reset-input-box">
-						<label for="changePasswordRepeat">Powtórz hasło:</label>
-						<input type="password" id="changePasswordRepeat">
+						<label for="changePasswordRepeat" class="profile__reset-label">Powtórz hasło:</label>
+						<input type="password" id="changePasswordRepeat" class="profile__reset-input">
+						<p class="profile__reset-alert profile__reset-alert--change">Podane hasła nie są takie same.</p>
 					</div>
-				</div>
+					<button type="button" class="profile__reset-btn">Zapisz</button>
+				</form>
 			</div>
 		</div>
 		</div>

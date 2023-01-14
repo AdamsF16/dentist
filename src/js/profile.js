@@ -5,6 +5,7 @@ const navLanguageOption = document.querySelectorAll(`.nav__language-btn`);
 const navLanguagePolish = document.querySelector(`.nav__language--pl`);
 const navLanguageEnglish = document.querySelector(`.nav__language--eng`);
 const navLanguageContainer = document.querySelector(`.nav__language-btn-container`);
+
 const myProfileBtn = document.querySelector(`.profile__my-profile-btn`)
 const editBtn = document.querySelector(`.profile__edit-btn`)
 const historyBtn = document.querySelector(`.profile__history-btn`)
@@ -13,6 +14,13 @@ const myProfile = document.querySelector(`.profile__my-profile-box`)
 const changeData = document.querySelector(`.profile__change-data-box`)
 const visitHistory = document.querySelector(`.profile__visit-history-box`)
 const changePassBox = document.querySelector(`.profile__reset-box`)
+
+const resetPassbtn = document.querySelector(`.profile__reset-btn`)
+const oldPassInput = document.querySelector(`#oldPassword`)
+const newPassInput = document.querySelector(`#changePassword`)
+const repeatPassword = document.querySelector(`#changePasswordRepeat`)
+const oldPassAlert = document.querySelector(`.profile__reset-alert--old`)
+const repeatPassAlert = document.querySelector(`.profile__reset-alert--change`)
 
 
 

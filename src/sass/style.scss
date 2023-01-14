@@ -1838,10 +1838,6 @@ nav {
 		align-self: center;
 	}
 
-
-
-
-
 	&__change-data-box {
 		display: none;
 	}
@@ -1851,8 +1847,57 @@ nav {
 	}
 
 	&__reset-box {
-		display: none;
+		display: flex;
+		flex-direction: column;
+		margin: 15px 10px;
 	}
+
+	&__reset-input-box {
+		display: flex;
+		flex-direction: column;
+		padding: 12px 0px;
+	}
+
+	&__reset-label {
+		font-weight: bold;
+		font-style: italic;
+		font-size: 1.5rem;
+		margin-bottom: 3px;
+	}
+
+	&__reset-input {
+
+		border: 1px solid $darker-grey;
+		height: 20px;
+		border-radius: 3px;
+		padding: 2px 4px;
+		margin-bottom: 5px;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $secondary-orange;
+			}
+	}
+
+	&__reset-alert {
+		display: none;
+		color: $red;
+		font-size: 1.3rem;
+		font-style: italic;
+
+		&--visible {
+			display: block
+		}
+	}
+
+	&__reset-btn {
+		@include btn-style;
+		margin-top: 10px;
+		width: 60%;
+		align-self: center;
+	}
+
+	
 
 
 
@@ -1868,7 +1913,7 @@ nav {
 	}
 
 	&__visible {
-		display: block !important;
+		display: flex !important;
 	}
 }
 
