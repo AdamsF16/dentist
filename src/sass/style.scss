@@ -1709,6 +1709,7 @@ nav {
 		align-items: center;
 		background-color: $bg-white;
 		max-width: 700px;
+		min-width: 250px;
 		position: relative;
 		top: 50%;
 		left: 50%;
@@ -1741,34 +1742,34 @@ nav {
 		font-family: $secondary-font;
 		font-size: 1.3rem;
 		padding: 3px;
-		transition: background-color .3s, font-weight .3s;
+		transition: font-weight .3s, font-size .3s;
 		cursor: pointer;
 
 
 		&:hover {
-			background-color: $secondary-orange;
+			font-size: 1.4rem;
 			font-weight: bold;
 		}
 	}
 
 	&__my-profile-btn {
 		grid-column: 1/2;
-		background-color: $light-grey;
+		background-color: $secondary-orange;
 	}
 
 	&__edit-btn {
 		grid-column: 2/3;
-		background-color: none;
+		background-color: $secondary-orange;
 	}
 
 	&__history-btn {
 		grid-column: 3/4;
-		background-color: $light-grey;
+		background-color: $secondary-orange;
 	}
 
 	&__change-pass-btn {
 		grid-column: 4/5;
-		background-color: none;
+		background-color: $secondary-orange;
 	}
 
 	&__logout-btn {
@@ -1780,6 +1781,77 @@ nav {
 		display: block;
 		margin-bottom: 3px;
 	}
+
+	&__my-profile-box {
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		padding: 10px 15px;
+	}
+
+	&__user-box {
+		padding: 0 10px;
+	}
+
+	&__img {
+		height: 200px;
+		width: 100%;
+		background-image: url('../../dist/img/blank-profile_1280.png');
+		background-position: center;
+		background-size: contain;
+		background-repeat: no-repeat;
+		margin-top: 10px;
+	}
+
+	&__name {
+		text-align: center;
+		font-family: $secondary-font;
+		font-size: 1.7rem;
+		font-weight: bold;
+		margin: 10px 0;
+	}
+
+	&__data-box {
+		display: flex;
+		flex-direction: column;
+		align-items: left;
+	}
+
+	&__data {
+		display: flex;
+		flex-direction: row;
+		margin: 5px 0;
+	}
+
+	&__data-title {
+		font-size: 1.5rem;
+		font-style: italic;
+		margin-right: 5px;
+		align-self: center;
+		
+	}
+
+	&__data-text {
+		font-size: 1.3rem;
+		align-self: center;
+	}
+
+
+
+
+
+	&__change-data-box {
+		display: none;
+	}
+
+	&__visit-history-box {
+		display: none;
+	}
+
+	&__reset-box {
+		display: none;
+	}
+
 }
 
 
@@ -1858,6 +1930,34 @@ nav {
 		&__img {
 			height: 450px;
 		}
+	}
+
+	.profile {
+		&__my-profile-box {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr;
+		}
+		&__user-box {
+			grid-column: 1/2;
+			grid-row: 1/2;
+		}
+
+		&__data-box {
+			grid-column: 2/3;
+			grid-row: 1/2;
+			margin-top: 15px;
+		}
+
+		&__data-title {
+			font-size: 1.6rem;
+		} 
+
+		&__data-text {
+			font-size: 1.4rem;
+		}
+
+
 	}
 }
 
