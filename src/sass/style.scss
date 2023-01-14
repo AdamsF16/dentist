@@ -1683,6 +1683,8 @@ nav {
 .profile {
 	// margin-top: 100px;
 
+
+
 	&__box {
 		position: relative;
 		margin-top: 80px;
@@ -1724,7 +1726,7 @@ nav {
 
 	&__menu {
 		width: 100%;
-		height: 50px;
+		height: 60px;
 	}
 
 	&__buttons {
@@ -1852,6 +1854,22 @@ nav {
 		display: none;
 	}
 
+
+
+
+
+
+
+
+
+
+	&__hidden {
+		display: none !important;
+	}
+
+	&__visible {
+		display: block !important;
+	}
 }
 
 
