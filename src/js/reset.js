@@ -44,13 +44,20 @@ const changeLanguage = (e) => {
 
 // RESET ZAPOMNIANEGO HASŁA
 const newPasswordReset = () => {
-    if(newPassword.value == newPasswordRepeat.value){
+    if(newPassword.value == newPasswordRepeat.value && newPassword.value !== "" &&newPasswordRepeat.value !== ""){
         newPassAllert.textContent = `Hasło zostało zmienione.`
         newPassAllert.classList.add(`password__done`)
 		newPassAllert.classList.remove(`password__failure`)
         newPassword.value = ``
 		newPasswordRepeat.value = ``
-    } else {
+    } else if(newPassword.value === "" || newPasswordRepeat.value === "") {
+		newPassAllert.textContent = `Podane pola nie mogą być puste.`
+		newPassAllert.classList.remove(`password__done`)
+        newPassAllert.classList.add(`password__failure`)
+		newPassword.value = ``
+		newPasswordRepeat.value = ``
+		
+	} else {
         newPassAllert.textContent = `Podane hasła nie są takie same.`
 		newPassAllert.classList.remove(`password__done`)
         newPassAllert.classList.add(`password__failure`)

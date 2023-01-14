@@ -26,7 +26,7 @@ const allAlerts = document.querySelectorAll(`.profile__reset-alert`)
 const corectAllert = document.querySelector(`.profile__reset-alert-corect`)
 
 
-
+// NAWIGACJA
 const handleNav = () => {
 	navMobile.forEach((link) => {
 		link.classList.toggle(`nav__active`);
@@ -59,6 +59,7 @@ const changeLanguage = (e) => {
 
 
 
+// NAWIGACJA PANELU PROFILU
 const showMyProfile = () => {
 	myProfile.classList.remove(`profile__hidden`);
 	// myProfile.classList.add(`profile__visible`);
@@ -108,6 +109,8 @@ const showReset = () => {
 
 
 
+
+// WALIDACJA ZMIANY HASŁA
 const checkValue = () => {
 	allInputs.forEach(input => {
 		if(input.value == "") {
