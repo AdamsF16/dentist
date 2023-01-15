@@ -1746,12 +1746,6 @@ nav {
 		padding: 3px;
 		transition: font-weight .3s, font-size .3s;
 		cursor: pointer;
-
-
-		&:hover {
-			font-size: 1.4rem;
-			font-weight: bold;
-		}
 	}
 
 	&__my-profile-btn {
@@ -1838,15 +1832,54 @@ nav {
 		align-self: center;
 	}
 
-
-
-
 	&__change-data-box {
-		display: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: left;
+		padding: 20px 15px;
+	}
+
+	&__change {
+		margin: 10px 0px;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__change-label {
+		font-weight: bold;
+		font-size: 1.5rem;
+		font-style: italic;
+		margin-bottom: 5px;
+	}
+
+	&__change-input {
+		padding: 3px 6px;
+		color: $darker-grey;
+		border-radius: 5px;
+		border: 1px solid black;
+
+		&:focus {
+			outline: none;
+			border: 1px solid $secondary-orange;
+		}
 	}
 
 
+	input[type=number]::-webkit-inner-spin-button, 
+	input[type=number]::-webkit-outer-spin-button { 
+    	-webkit-appearance: none;
+    	-moz-appearance: none;
+    	appearance: none;
+    	margin: 0; 
+	}
 
+	&__change-btn {
+		@include btn-style;
+		width: 50%;
+		align-self: center;
+		margin-top: 15px;
+	}
 
 
 	&__visit-history-box {
@@ -1894,13 +1927,6 @@ nav {
 	&__visit-table-element {
 		padding: 5px 10px;
 	}
-
-
-
-
-
-
-
 
 	&__reset-box {
 		display: none;
@@ -1961,17 +1987,6 @@ nav {
 		width: 60%;
 		align-self: center;
 	}
-
-	
-
-
-
-
-
-
-
-
-
 
 	&__hidden {
 		display: none !important;
@@ -2049,7 +2064,15 @@ nav {
 		&__table-body {
 			font-size: 1.5rem;
 		}
+	}
 
+	.profile {
+		&__my-profile-btn, &__edit-btn, &__history-btn, &__change-pass-btn, &__logout-btn {
+			&:hover {
+				font-size: 1.4rem;
+				font-weight: bold;
+			}
+		}
 	}
 }
 
@@ -2194,7 +2217,38 @@ nav {
 	.profile {
 		&__bg {
 		background-image: url('../../dist/img/profile_bg.jpeg');
+		}
 	}
+
+	.profile {
+		&__change-data-box {
+			width: 100%;
+			margin-left: 40px;
+			justify-content: left;
+			align-items: left;
+		}
+
+		&__change {
+			flex-direction: row;
+			justify-content: space-between;
+		}
+
+		&__change-input {
+			width: 340px;
+			margin-right: 20px;
+			padding: 5px 10px;
+			font-weight: bold;
+		}
+
+		&__change-label {
+			font-size: 1.6rem;
+			margin-right: 10px;
+		}
+
+		&__change-btn {
+			width: 200px;
+			margin-top: 40px;
+		}
 	}
 }
 
