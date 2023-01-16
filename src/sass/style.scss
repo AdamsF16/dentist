@@ -1601,6 +1601,14 @@ nav {
 		max-width: 270px;
 	}
 
+	&__table-title {
+		margin-left: 15px;
+		margin-bottom: 8px;
+		font-style: italic;
+		font-size: 2rem;
+		// text-transform: uppercase;
+	}
+
 	&__table-head {
 		font-size: 1.4rem;
 		font-weight: bold;
@@ -1660,18 +1668,20 @@ nav {
 		}
 	}
 
-	&__next-btn {
+
+	&__next-btn, &__previous-btn {
 		background: none;
 		border: none;
 		margin-top: 5px;
 		color: $secondary-orange;
+		margin: 0 8px;
 		font-weight: bold;
 		transform: scale(1);
 		transition: transform .3s;
 		cursor: pointer;
 
 		&:hover {
-			transform: scale(1.1);
+			transform: scale(1.05);
 		}
 	}
 }
@@ -1833,7 +1843,7 @@ nav {
 	}
 
 	&__change-data-box {
-		display: flex;
+		display: none;
 		flex-direction: column;
 		justify-content: center;
 		align-items: left;
@@ -1872,6 +1882,17 @@ nav {
     	-moz-appearance: none;
     	appearance: none;
     	margin: 0; 
+	}
+
+	&__change-alert-email {
+			display: none;
+			align-self: center;
+			font-size: 1.3rem;
+			color: $red;
+
+			&--visible {
+				display: block
+			}
 	}
 
 	&__change-btn {
@@ -2244,6 +2265,11 @@ nav {
 			font-size: 1.6rem;
 			margin-right: 10px;
 		}
+
+		&__change-alert-email {
+			align-self: flex-end;
+			margin-right: 95px;
+			}
 
 		&__change-btn {
 			width: 200px;

@@ -25,6 +25,10 @@ const repeatPassAlert = document.querySelector(`.profile__reset-alert--change`)
 const allAlerts = document.querySelectorAll(`.profile__reset-alert`)
 const corectAllert = document.querySelector(`.profile__reset-alert-corect`)
 
+const emailInput = document.querySelector(`#changeEmail`)
+const emailAlert = document.querySelector(`.profile__change-alert-email`)
+const changeBtn = document.querySelector(`.profile__change-btn`)
+
 
 // NAWIGACJA
 const handleNav = () => {
@@ -137,8 +141,6 @@ const passwordChecker = () => {
     }
 }
 
-
-
 const checkPassInputs = () => {
 	checkValue()
 	passwordChecker()
@@ -160,6 +162,32 @@ const checkPassInputs = () => {
 }
 
 
+// EMAIL
+
+const checkCorrectEmail = () => {
+	const correctEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
+
+	if(emailInput.value.match(correctEmail)) {
+		emailAlert.classList.remove(`profile__change-alert-email--visible`)
+	} else {
+		emailAlert.classList.add(`profile__change-alert-email--visible`)
+	}
+}
+
+
+// const checkCorrectEmail = () => {
+// 	const correctEmail = /[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/g
+
+// 	if(emailRegister.value.match(correctEmail)){
+// 		// emailRegister.value = ''
+// 		emailRegisterAllert.classList.remove(`register__alert-email--visible`)
+// 		emailRegisterAllert.classList.remove(`register__alert--visible`)
+// 	} else {
+// 		emailRegisterAllert.classList.add(`register__alert-email--visible`)
+// 		emailRegisterAllert.textContent = 'Proszę wpisać poprawny adres email.'
+	
+
+
 
 
 
@@ -168,6 +196,8 @@ myProfileBtn.addEventListener(`click`, showMyProfile)
 editBtn.addEventListener(`click`, showEditPanel)
 historyBtn.addEventListener(`click`, showHistory)
 changePassBtn.addEventListener(`click`, showReset)
+
+changeBtn.addEventListener(`click`, checkCorrectEmail)
 
 resetPassbtn.addEventListener(`click`, checkPassInputs)
 
